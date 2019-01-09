@@ -120,7 +120,7 @@ a:active {
     color: #0a10b1;
 }
 a.current {
-  color: #d9534f;
+  color: #000;
 }
 /* list general instructions */
 li {
