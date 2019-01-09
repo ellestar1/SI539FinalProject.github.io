@@ -1,0 +1,648 @@
+/*
+ Theme Name:   Sparkling Child Theme
+ Description:  A child theme of the Sparkling WordPress theme
+ Author:       Lucas Andrich
+ Template:     sparkling
+ Version:      1.0.0
+*/
+
+@import url("../sparkling/style.css");
+
+/* custom CSS */
+/* -------------------------------- */
+
+body.home .container.main-content-area {
+	display: none;
+	
+}
+
+#page {
+	overflow: hidden;
+}
+
+p {
+	font-size: 16px;
+	line-height: 150%;
+}
+
+a {
+	color: #0064ff;
+}
+
+a:hover, a:focus {
+	color: #a1c6ff;
+}
+
+header#masthead {
+	margin-bottom: 0px !important;
+}
+
+body.home .navbar {
+	/* display: none; */
+	top: -105px;
+	
+	-webkit-transition: top 1s; /* Safari 3.1 to 6.0 */
+    transition: top 1s;
+}
+
+div#logo {
+	margin-left: 15px;
+}
+
+.circle-overlay {
+	position: absolute;
+	top: 5px;
+	left: 0px;
+	z-index: 99;
+	width: 200%;
+	height: 100px;
+	left: 55%;
+	-ms-transform: translateX(-55%);
+    -webkit-transform: translateX(-55%);
+    transform: translateX(-55%);
+	border-radius: 55%;
+	background-color: #AED6F1;
+}
+
+div#logo img {
+	position: relative;
+	width: auto;
+	height: 70px;
+	
+	z-index: 100;
+	
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+button.btn.navbar-toggle {
+	margin-top: 30px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #FFC100;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #FFC100;
+}
+
+/*
+.hp-hero-container {
+	background-attachment: fixed;
+	width:100%;
+    height:100%;
+    position: relative;
+	
+	height: 975px;
+	background-image: url(images/hero-image.jpg);
+}
+*/
+
+.hp-hero-container {
+	position: relative;
+	height: 975px;
+	background-position: bottom center;
+	background-image: url(images/hero-image-instruments.jpg);
+	background-size: cover;
+	overflow: hidden;
+}
+
+video#bgvid {
+	position: relative;
+	
+    width: 700px;
+    height: auto;
+	
+	top: 70px;
+	left: 50%;
+	-ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+	
+	z-index: 10;
+}
+
+.picture-frame-overlay {
+	position: absolute;
+	
+	top: 30px;
+	left: 50%;
+	-ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+	
+	z-index: 100;
+}
+
+.picture-frame-overlay img {
+	width: 750px;
+	height: 500px;
+	max-width: none;
+}
+
+.gramophone-gif-overlay {
+	position: absolute;
+	
+	top: 285px;
+	left: 46%;
+	-ms-transform: translateX(-54%);
+    -webkit-transform: translateX(-54%);
+    transform: translateX(-54%);
+	
+	z-index: 110;
+}
+
+canvas#coinAnimation {
+	width: 660px;
+}
+
+canvas#coinAnimation:hover {
+	cursor: pointer;
+}
+
+
+.gramophone-overlay {
+	position: absolute;
+	
+	top: 365px;
+	left: 50%;
+	-ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+	
+	z-index: 110;
+}
+
+
+.gramophone-overlay img {
+	width: 800px;
+	height: auto;
+	
+	max-width: none;
+}
+
+.gramophone-overlay img:hover {
+	cursor: pointer;
+}
+
+
+@media (max-width: 900px)
+{
+	.hp-hero-container {
+		height: 700px;
+	}
+	
+	video#bgvid {
+		width: 500px;
+	}
+	
+	.picture-frame-overlay img {
+		width: 550px;
+		height: 380px;
+	}
+	
+	.gramophone-gif-overlay {
+		top: 230px;
+		left: 45%;
+		-ms-transform: translateX(-55%);
+		-webkit-transform: translateX(-55%);
+		transform: translateX(-55%);
+	}
+
+	canvas#coinAnimation {
+		width: 450px;
+	}
+	
+	.gramophone-overlay {
+		top: 375px;
+		left: 60%;
+		-ms-transform: translateX(-40%);
+		-webkit-transform: translateX(-40%);
+		transform: translateX(-40%);
+	}
+	
+	.gramophone-overlay img {
+		width: 400px;
+	}
+}
+
+@media (max-width: 540px)
+{
+	.hp-hero-container {
+		height: 530px;
+	}
+	
+	video#bgvid {
+		width: 280px;
+	}
+	
+	.picture-frame-overlay {
+		top: 50px;
+	}
+	
+	.picture-frame-overlay img {
+		width: 320px;
+		height: 210px;
+	}
+	
+	.gramophone-gif-overlay {
+		top: 190px;
+		
+		left: 46%;
+		-ms-transform: translateX(-54%);
+		-webkit-transform: translateX(-54%);
+		transform: translateX(-54%);
+	}
+	
+	canvas#coinAnimation {
+		width: 315px;
+	}
+	
+	.gramophone-overlay {
+		top: 285px;
+		
+		left: 55%;
+		-ms-transform: translateX(-45%);
+		-webkit-transform: translateX(-45%);
+		transform: translateX(-45%);
+	}
+	
+	.gramophone-overlay img {
+		width: 300px;
+	}
+}
+
+.important-boxes {
+	position:relative;
+	height: 300px;
+	background-size: cover;
+}
+
+.important-boxes:after {
+    position:absolute;
+    opacity:1;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+	
+	content:'\A';
+    width:100%;
+	height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.3);
+}
+
+.important-boxes:hover > h1 {
+    opacity: 0;
+}
+
+.important-boxes:hover:after {
+    opacity:0;
+}
+
+.important-boxes h1 {
+	position: relative;
+	text-align: center;
+	color: #fff;
+	z-index: 1000;
+	
+	top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+	
+	transition: all 0.5s;
+	
+	margin: 0px;
+}
+
+.important-box-one {
+	background-image: url(images/pre-order-bg.jpg);
+	background-position: bottom center;
+}
+
+.important-box-two {
+	background-image: url(images/book-fred-bg.jpg);
+	background-position: top center;
+}
+
+.important-box-three {
+	background-image: url(images/tour-dates-bg.jpg);
+	background-position: bottom center;
+}
+
+.important-boxes-container {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.hp-blog-row {
+	position: relative;
+	//background-image: url(images/OC-sky-op-20.jpg);
+	background-image: url(images/pd-sky-blue-80.jpg);
+	background-position: bottom center;
+	background-size: cover;
+}
+
+.home-branch {
+	position: absolute;
+	bottom: -180px;
+	right: 0px;
+	
+	width: auto;
+	max-width: none;
+	height: 385px;
+}
+
+.home-wordbird {
+	position: absolute;
+	bottom: -50px;
+	left: 2%;
+	
+	width: auto;
+	max-width: none;
+	height: 300px;
+	
+	-ms-transform: rotate(-20deg); /* IE 9 */
+    -webkit-transform: rotate(-20deg); /* Chrome, Safari, Opera */
+    transform: rotate(-20deg);
+}
+
+
+
+.blog-section-button, .tour-section-button {
+	color: #fff;
+	background-color: #AED6F1;
+	width: 130px;
+}
+
+.tour-no-link-button {
+	color: #fff;
+	background-color: #AED6F1;
+	width: 130px;
+	/*
+	display: inline-block;
+	padding: 6px 12px;
+	margin-bottom: 0px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: no-wrap;
+	vertical-align: middle;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;*/
+}
+
+.tour-no-link-button:hover {
+	color: #156fbf;
+	cursor: default;	
+}
+
+.tour-dates-container {
+	margin-top: 15px; 
+	padding-top: 15px;#156fbf
+	padding-left: 0px; 
+	padding-right: 0px;
+	min-height:40px;
+}
+
+.blog-section-button {
+	margin-top: 10px;
+}
+
+.blog-section-button:hover, .tour-section-button:hover, 
+.blog-section-button:focus, .tour-section-button:focus {
+	color: #fff;
+	background-color: #AED6F1;
+}
+
+.hp-blog-row-right img {
+	width: 100%;
+}
+
+.flexslider {
+	margin-bottom: 0px;
+}
+
+.flexslider-test-box {
+	position: relative;
+	
+	padding-top: 40px;
+}
+
+.flexslider-test-box p {
+	color: #000;
+}
+
+.flexslider-test-box p:nth-of-type(1) {
+	/* font-weight: bold; */
+}
+
+.flexslider-test-box p:nth-of-type(2) {
+	margin-top: 20px;
+	margin-bottom: 0px;
+}
+
+.flexslider-test-box p:nth-of-type(3) {
+	font-weight: bold;
+}
+
+.flexslider-testimonial-quotes {
+	position: absolute;
+	
+	top: 0px;
+	left: 50%;
+    transform: translateX(-50%);
+	
+	text-align: center;
+	
+}
+
+.flexslider-testimonial-quotes img {
+	width: 25px !important;
+}
+
+.text-white {
+	color: #fff;
+}
+
+.text-black {
+	color: #000;
+}
+
+.hp-testimonial-section {
+	display: none;
+	
+	background-color: #FFC100;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.hp-blog-row {
+	padding-top: 60px;
+	padding-bottom: 150px;
+}
+
+#cust-footer {
+	background-color: #AED6F1;
+	padding-top: 80px;
+	padding-bottom: 40px;
+}
+
+.footer-logo {
+	width: 80px;
+	margin-left: 10px;
+	margin-bottom: 20px;
+}
+
+.footer-social-icon-container {
+	text-align: center;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+.footer-social-icon {
+	height: 40px;
+	width: 40px;
+	
+	transition: all 0.2s ease 0s;
+	-webkit-transition: all 0.2s ease 0s;
+	-moz-transition: all 0.2s ease 0s;
+	-o-transition: all 0.2s ease 0s;
+	
+	display: inline-block;
+}
+
+.footer-social-icon:hover {
+	background-position: 0px -40px;
+}
+
+.social-icon-facebook {
+	background-image: url(images/social-icon-facebook-original.png);
+}
+
+.social-icon-twitter {
+	background-image: url(images/social-icon-twitter-original.png);
+}
+
+.social-icon-ebay {
+	background-image: url(images/social-icon-instagram-original.png);
+}
+
+.pre-order-left-side {
+	padding-right:15px; padding-left:0px; padding-bottom: 30px;
+}
+
+.pre-order-logo-container {
+	display: flex;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	justify-content: space-between;
+}
+
+body.home #cust-footer {
+	padding-top: 130px;
+}
+
+.center {
+    display: block;
+    width: 150px;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1800px)
+{
+	.home-wordbird {
+		// display: none;
+	}
+	
+	.hp-blog-row {
+		padding-bottom: 300px;
+	}
+}
+
+@media (max-width: 767px)
+{
+	.navbar-nav > li {
+		padding: 0px;
+	}
+	
+	.hp-blog-row-right {
+		margin-top: 60px;
+	}
+	
+	.important-box-two, .important-box-three {
+		margin-top: 30px;
+	}
+
+	.important-boxes {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	
+	.circle-overlay {
+		display: none;
+	}
+	
+	.tour-dates-container {		
+		border-top: 1px solid black;
+	}
+	
+	.tour-section-button, .tour-no-link-button {
+		margin-top: 15px;
+	}
+	
+	.tour-section-date, .tour-section-title {
+		font-weight: bold;
+	}
+	
+	.tour-section-title, .tour-section-location, .tour-section-button-container {
+		text-align: right;
+		padding-right: 0px;
+	}
+	
+	.pre-order-left-side {
+		padding-right: 0px;
+	}
+	
+	.home-branch {
+		// display: none;
+	}
+}
+
+@media (min-width: 768px)
+{
+	.important-boxes {
+		width: 31% !important;
+	}
+	
+	.navbar-default .navbar-nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 0px;
+		text-transform: capitalize;
+		font-size: 14px;
+	}
+	
+	ul#menu-main-nav {
+		margin-top: 5px;
+	}
+	
+	div#logo {
+		position: relative;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.navbar-default .navbar-nav > li > a {
+		font-size: 12px;
+	}
+}
+
+
