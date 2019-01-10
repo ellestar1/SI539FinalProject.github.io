@@ -3,7 +3,7 @@
 }
 
 /* Container needed to position the overlay. Adjust the width as needed */
-.container {
+.container2 {
   position: relative;
   width: 50%;
   max-width: 300px;
@@ -115,21 +115,6 @@ body {
   	padding: 20px;
   	border: 10px solid #888888;
 }
-/* The sticky class is added to the header with JS when it reaches its scroll position (adapted partially from W3Schools) */
-.content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 102px;
-}
 
 #navigation li {
   box-sizing: border-box;
@@ -194,7 +179,7 @@ li {
   line-height: 2.5;
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
-  color: #156fbf;
+  color: #429CEA;
 }
 
 .li2-circle-white {
@@ -229,7 +214,7 @@ li {
 }
 
 header {
-  background-color: #156fbf;
+  background-color: #429CEA;
   padding: 20px;
   text-align: center;
   font-size: 32px;
@@ -251,9 +236,9 @@ footer, address, p.hours {
   padding:10px;
 }
 
- h2 {
+ h1 {
   text-indent: 2em;
-  font-size: 16px;
+  font-size: 18px;
   font-family:PT Sans;
   color: #000000;
   padding:2px;
@@ -680,11 +665,11 @@ li {
     height: 300px;
     padding:10px;
 }
-  h1 {
+/*  h1 {
     font-size: 26px;
   }
-
-h2{
+*/
+h1{
 
 }
 .align {
