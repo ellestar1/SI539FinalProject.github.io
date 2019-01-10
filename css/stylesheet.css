@@ -2,6 +2,41 @@
 	box-sizing: border-box;
 }
 
+/* Container needed to position the overlay. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+/* Make the image to responsive */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* overlay effect for carousel - lays on top of the container and over the image */
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title */
+.container:hover .overlay {
+  opacity: 1;
+}
+
 html {
   min-height: 100%;
   background-color: #AED6F1;
@@ -19,6 +54,11 @@ body {
   font-family: 'PT Sans', sans-serif;
   background-color: #AED6F1;
 }
+
+.container.main-content-area {
+  display: none;
+}
+
 .circle{
   width:150px;
   height:100px;
@@ -50,6 +90,17 @@ body {
   	border-radius: 12px;
     color: #000000;
 }
+
+.box_index {
+  background-color: #ffffff;
+    font-family: Bungee, sans-serif;
+    font-size:18px;
+    padding: 20px;
+    border: 12px solid #156fbf;
+    border-radius: 12px;
+    color: #000000;
+}
+
 .greetings{
 	background-color: #156fbf;
 	color: #ffffff;
@@ -64,6 +115,22 @@ body {
   	padding: 20px;
   	border: 10px solid #888888;
 }
+/* The sticky class is added to the header with JS when it reaches its scroll position (adapted partially from W3Schools) */
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
 #navigation li {
   box-sizing: border-box;
   display: inline;   /* Make our navigation display in a line */
@@ -112,11 +179,11 @@ body {
 }
 /* give links color when hovered over with mouse*/
 a:hover {
-  color: #d9534f;
+  color: #FFC100;
 }
 /* give active link (when clicked or activated a color and background color*/
 a:active { 
-    background-color: #d9534f;
+    background-color: #000;
     color: #0a10b1;
 }
 a.current {
@@ -187,24 +254,28 @@ footer, address, p.hours {
  h2 {
   text-indent: 2em;
   font-size: 16px;
+  font-family:PT Sans;
   color: #000000;
   padding:2px;
-  }
+}
 
 p {
     clear: both;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 p.q_a2 {
     font-family: Bungee, sans-serif;
     font-size:18px;
     color:#000000;
 }
+
 p.white_head {
     font-family: Bungee, sans-serif;
     font-size:20px;
     color:#ffffff;
 }
+
 p.code_o {
     font-family: 'Source Code Pro', monospace;
     color:#000000;
@@ -251,6 +322,10 @@ img {
     display: block;
     width: 150px;
 }
+
+.center_box {
+    display: block;
+}
 .main_center {
     display: block;
     height: 300px;
@@ -258,12 +333,12 @@ img {
 }
 .center_jewels {
     display: block;
-    width: 300px;
+    width: 60%;
 }
 
 .doubleimg {
     display: inline-block;
-    width: 100px;
+    width: 200px;
     padding:10px;
 
 }
@@ -271,7 +346,7 @@ img {
 .game {
     display: inline-block;
     vertical-align: middle;
-    width: 200px;
+/*    width: 200px;*/
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4px;
@@ -282,7 +357,7 @@ img {
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
- }
+}
 
 
 .circle-overlay {
@@ -297,7 +372,7 @@ img {
     -webkit-transform: translateX(-55%);
     transform: translateX(-55%);
   border-radius: 55%;
-  background-color: #AED6F1;
+  background-color: #fff;
 }
 
 #cust-footer {
@@ -328,9 +403,9 @@ img {
   -webkit-transition: all 0.2s ease 0s;
   -moz-transition: all 0.2s ease 0s;
   -o-transition: all 0.2s ease 0s;
-  
   display: inline-block;
 }
+
 /* Cool Hover trick, moves display from one part of image to another */
 .footer-social-icon:hover {
   background-position: 0px -40px;
@@ -369,6 +444,20 @@ img {
   justify-content: space-between;
   }
 
+.wrapper-grid-index {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2%;
+  padding-bottom: 5px;
+  background-color: #AED6F1;
+  color: #000000;
+  align-items: start;
+  align-content: space-around;
+  justify-content: space-between;
+  }
+
+
   .greetings {
   background-color: #156fbf;
   color: #ffffff;
@@ -377,16 +466,13 @@ img {
     border-radius: 5px;
     padding: 20px;
     font-size: 80%;
-  }
+}
 
 /*p.q_a2 {
     font-family: Bungee, sans-serif;
     font-size:12px;
     color:#000000;
   
-h2{
-}*/
-
 .align {
   text-align: center;
   font-size: 20px;
@@ -488,10 +574,10 @@ li {
 }
 */
 
-.greetings *, .box *, .aside *{
+/*.greetings *, .box *, .aside *{
   width:95%;
   margin-left: 0;
-}
+}*/
 
 .bordertown_reverse_small{
   margin-bottom: 2%;
@@ -506,7 +592,7 @@ li {
   }
 
   .nav a:hover {
-    color: #fffffff;
+    color: #fff;
 }
 
   .nav a:active { 
@@ -518,6 +604,16 @@ li {
     display: none;
     float: right;
   }
+  img {}
+.doubleimg {
+    display: inline-block;
+    width: 100px;
+    padding:10px;
+  }
+ .center {
+    display: block;
+    width: 150px;
+} 
 }
 
 @media screen and (max-width: 785px) {
@@ -528,15 +624,15 @@ li {
     top: 0;
   }
   .nav.responsive li a:hover {
-  color: #d9534f;
+  color: #FFC100;
 }
 /* give active link (when clicked or activated a color and background color*/
 .nav.responsive li a:active { 
-    background-color: #d9534f;
+    background-color: #000;
     color: #0a10b1;
 }
 .nav.responsive li a.current {
-  color: #d9534f;
+  color: #000;
 }
   .nav.responsive {
     position: relative;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cShrikhand%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cDo+Hyeon%7cPT+Sans%7cSource+Code+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cShrikhand%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="shortcut icon" href="images/favicon.ico">
   </head>
@@ -15,7 +15,7 @@
       <div class="circle">
         <img src="images/b_e_logo.png"  height="100" width="100" alt="B & Games logo"/>
       </div>
-      <nav roll="navigation">
+      <nav>
         <div class="nav" id="myNav">
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i></a>
@@ -30,7 +30,6 @@
     </header>
       <h2 class="align"> We’re not here to be the big guy - we’re just
   <img src="images/b_e_logo.png" alt="B & E Games stylized letters logo" class="center"></h2>
-  <main roll="main">
   <div class="wrapper-grid">
   <div class="box greetings">
     <div id="thinghead">Well Hello There!</div>
@@ -54,10 +53,10 @@
   <p class="code_o">7 Cherry Tree Lane, Wimpole, MI, 48312<br><br>
 We are based out of sunny Michigan, USA but we ship all over the world!</p>
   </div>
-</div></main>
+</div>
   <div id="cust-footer"></div>
     <div class="footer-container container text-center">
-      <img class="footer-logo" src="images/100x100b_e_logo.png" alt="B & E Stylized Text Company Logo"/>
+      <img class="footer-logo" src="images/b_e_logo.png" alt="B & E Stylized Text Company Logo"/>
       <div class="footer-link-container">
         <a class="twitter footer-social-icon" aria-label="twitter icon" rel="nofollow" target="new" href="https://twitter.com/BandE_Games"></a>
         <a class="facebook footer-social-icon" aria-label="facebook icon" rel="nofollow" target="new" href="https://www.facebook.com/BandE_Games/"></a>
@@ -65,8 +64,9 @@ We are based out of sunny Michigan, USA but we ship all over the world!</p>
  <p class="hours">Weekly Hours Friday - 5pm-12am  and Saturday-Sunday 10am-7pm</p>
 <address>B & E Games | 7 Cherry Tree Lane, Wimpole, MI, 48312 | Phone (669) 244-2631 </address>
 <footer>© 2018 B & E Games</footer></div>
+<div class="scroll-to-top" style="display: block;"> 
+<i class="fa fa-angle-up"></i></div><!-- .scroll-to-top -->
 <script>
-
 function myFunction() {
   var x = document.getElementById("myNav");
   if (x.className == "nav") {
@@ -76,7 +76,7 @@ function myFunction() {
   }
 }
 </script>
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
 $(function(){
   $('a').each(function() {
