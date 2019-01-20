@@ -198,15 +198,11 @@ body {
 
 /*         Testing Dynamic Calendar Grid.      */
 
-.calendar-body{
-  background-color: yellow;
-}
-
-#calendar-topper{
+#calendar{
   margin-left: auto;
   margin-right: auto;
   width: 320px;
-  font-family: 'Baloo', sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
 }
 #calendar_weekdays div{
   display:inline-block;
