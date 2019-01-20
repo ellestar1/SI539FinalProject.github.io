@@ -1,3 +1,5 @@
+
+
 *{
 	box-sizing: border-box;
 }
@@ -9,19 +11,19 @@
   max-width: 300px;
 }
 
-/* Make the image to responsive */
+/*/* Make the image to responsive
 .image {
   display: block;
   width: 100%;
   height: auto;
-}
+}*/
 
 /* overlay effect for carousel - lays on top of the container and over the image */
-.overlay {
+/*.overlay {
   position: absolute; 
   bottom: 0; 
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: #000;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through 
   color: #f1f1f1; 
   width: 100%;
   transition: .5s ease;
@@ -29,17 +31,17 @@
   color: white;
   font-size: 20px;
   padding: 20px;
-  text-align: center;
+  text-align: center;*/
 }
 
 /* When you mouse over the container, fade in the overlay title */
-.container:hover .overlay {
+.container2:hover .overlay {
   opacity: 1;
 }
 
 html {
   min-height: 100%;
-  background-color: #AED6F1;
+  background-color: #7FDBFF;
 }
 .background {
    background: url("../images/cardgames_bg.png");
@@ -50,9 +52,9 @@ html {
 
 body {
   margin: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   font-family: 'PT Sans', sans-serif;
-  background-color: #AED6F1;
+  background-color: #7FDBFF;
 }
 
 .container.main-content-area {
@@ -74,7 +76,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 48%);
   grid-gap: 2%;
-  background-color: #AED6F1;
+  background-color: #fff;
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -83,26 +85,26 @@ body {
 
 .box {
 	background-color: #ffffff;
-    font-family: Bungee, sans-serif;
+    font-family: Baloo, sans-serif;
     font-size:18px;
     padding: 20px;
-    border: 12px solid #156fbf;
+    border: 12px solid #0074D9;
   	border-radius: 12px;
     color: #000000;
 }
 
 .box_index {
   background-color: #ffffff;
-    font-family: Bungee, sans-serif;
+    font-family: Baloo, sans-serif;
     font-size:18px;
     padding: 20px;
-    border: 12px solid #156fbf;
+    border: 12px solid #0074D9;
     border-radius: 12px;
     color: #000000;
 }
 
 .greetings{
-	background-color: #156fbf;
+	background-color: #0074D9;
 	color: #ffffff;
   	border-radius: 5px;
   	padding: 20px;
@@ -116,6 +118,13 @@ body {
   	border: 10px solid #888888;
 }
 
+.articleboxformat {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 10vw 30vw 10vw;
+  grid-gap: 2%;
+}
+
 #navigation li {
   box-sizing: border-box;
   display: inline;   /* Make our navigation display in a line */
@@ -125,7 +134,7 @@ body {
   /*clear: both;*/
   margin: 0.5rem 0 0;
   text-transform: uppercase;
-  font-family: 'Bungee', sans-serif;
+  font-family: 'Baloo', sans-serif;
   font-size: 20px;
 }
 #doubleimage{
@@ -136,35 +145,131 @@ body {
 }
 .nav ul{
   float: right;
+  padding-left: 0px;
 }
 .nav li{
     float: left;
     overflow: hidden;
     padding-right: 50px;
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 2vw;
 }
 .nav li:not(:first-child) {
-    padding-left: 50px;
+    padding-left: 25px;
   }
 /* give the nav links text decoration and color*/
 .nav a {
   text-decoration: initial;
   color: #ffffff;
 }
-/* Add an active class to highlight the current page */
-/*.active {
-  background-color: #4CAF50;
-  color: white;
-}*/
 
 /* Hide the link that should open and close the topnav on small screens */
 .nav .icon {
   display: none;
 }
+#heading-1, #heading-2, #heading-3{
+  background-color: #0074D9;
+}
+/* thingity thing thing thing */
+.panel-title > a {
+  display: block;
+  position: relative;
+}
+.panel-title > a:before {
+ content: "\f522"; /* double dice icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 28px;
+  color: #ffffff;
+  position: absolute;
+  right: 0;
+}
+.panel-title > a[aria-expanded="true"]:before {
+  content: "\f523"; /* 5 dice icon */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+}
+
+.panel-title > a:active {
+  background-color: inherit;
+}
+
+/*         Testing Dynamic Calendar Grid.      */
+
+.calendar-body{
+  background-color: yellow;
+}
+
+#calendar-topper{
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  font-family: 'Baloo', sans-serif;
+}
+#calendar_weekdays div{
+  display:inline-block;
+  vertical-align:top;
+}
+#calendar_content, #calendar_weekdays, #calendar_header{
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  float: left;
+  z-index: 10;
+}
+#calendar_weekdays div, #calendar_content div{
+  width:40px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #000;
+}
+#calendar_content{
+  -webkit-border-radius: 0px 0px 12px 12px;
+  -moz-border-radius: 0px 0px 12px 12px; 
+  border-radius: 0px 0px 12px 12px;
+}
+#calendar_content div{
+  float: left;
+}
+#calendar_content div:hover{
+  background-color: #F8F8F8;
+}
+#calendar_content div.blank{
+  background-color: #575757;
+}
+#calendar_header, #calendar_content div.today{
+  zoom: 1;
+  filter: alpha(opacity=70);
+/*  opacity: 0.7;*/
+}
+#calendar_content div.today{
+  color: #FFFFFF;
+}
+#calendar_header{
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  background-color: #0074D9;
+  padding: 18px 0;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px; 
+  border-radius: 12px 12px 0px 0px;
+}
+#calendar_header h1{
+  font-size: 1.5em;
+  color: #FFFFFF;
+  float:left;
+  width:70%;
+}
+/* End Dynamic Calendar Stuff*/
+
 /* give links color when hovered over with mouse*/
 a:hover {
-  color: #FFC100;
+  color: #fdb81e;
 }
 /* give active link (when clicked or activated a color and background color*/
 a:active { 
@@ -174,7 +279,16 @@ a:active {
 a.current {
   color: #000;
 }
-/* list general instructions */
+/* list general css instructions */
+
+article,
+aside{
+  /*background: #eaeaea;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
 li {
   line-height: 2.5;
   font-family: Arial, Helvetica, sans-serif;
@@ -214,7 +328,7 @@ li {
 }
 
 header {
-  background-color: #429CEA;
+  background-color: #0074D9;
   padding: 20px;
   text-align: center;
   font-size: 32px;
@@ -229,6 +343,10 @@ i.fa::before{
     font-size: 40px;
 }
 
+i.fas::before{
+  color:#fdb81e;
+}
+
 footer, address, p.hours {
   text-align: center;
   font-size: 14px;
@@ -238,21 +356,30 @@ footer, address, p.hours {
 
  h1 {
   text-indent: 2em;
-  font-size: 18px;
-  font-family:PT Sans;
+  font-size: 2vw;
+  font-family:Baloo;
   color: #000000;
   padding:2px;
 }
 
+.align {
+  text-align: center;
+  font-size: 20px;
+  font-family:Baloo;
+  }
+
+h2 {
+}
+.panel-title{
+    font-family: Baloo, sans-serif;
+    font-size: 2em;
+    color:#000000;
+}
+
+
 p {
     clear: both;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-p.q_a2 {
-    font-family: Bungee, sans-serif;
-    font-size:18px;
-    color:#000000;
 }
 
 p.white_head {
@@ -266,37 +393,42 @@ p.code_o {
     color:#000000;
 }
 
-ul{
-
+p.lefty-o {
+  text-align: left;
 }
 
-.bordertown {
+ul{
+}
+
+.borderbox {
 	display: flex;
-	width: 50%;
+	width: 100%;
 	/*vertical-align: middle;*/
 	border-style: solid;
 	border-width: thick;
-	color: #156fbf;
+	color: #0074D9;
 	padding:10px;
 }
 
-.bordertown_reverse {
-	width:40%;
+.borderbox_reverse {
+	width:100%;
 	border-style: solid;
 	border-width: thick;
 	color: #ffffff;
   padding: 30px;
 }
-.bordertown_reverse_small {
+.borderbox_reverse_small {
 	display: inline-block;
 	width:47%;
 /*	vertical-align: middle;*/
 	border-style: solid;
 	border-width: thick;
-	color: #ffffff;
+	color: #fff;
 }
 
 img {
+  max-width: 100%;
+  height: auto;
 	margin-left: auto;
     margin-right: auto;
     padding-bottom: 4px;
@@ -330,7 +462,7 @@ img {
 
 .game {
     display: inline-block;
-    vertical-align: middle;
+/*    vertical-align: middle;*/
 /*    width: 200px;*/
     margin-left: 10%;
     margin-right: 10%;
@@ -361,7 +493,7 @@ img {
 }
 
 #cust-footer {
-  background-color: #AED6F1;
+  background-color: #7FDBFF;
   padding-top: 80px;
   padding-bottom: 40px;
 }
@@ -408,9 +540,11 @@ img {
   background-image: url(../images/ebay32-x.png);
 }
 
+/* Defining some advanced CSS & query for the     */
+
 
 /* Media Queries begin */
-
+/*-------------------------------------------------------------------------------*/
 @media (orientation: portrait) {
   body {
     flex-direction: row;
@@ -422,7 +556,7 @@ img {
   grid-template-columns: 1fr;
   grid-gap: 2%;
   padding-bottom: 5px;
-  background-color: #AED6F1;
+  background-color: #fff;
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -435,16 +569,15 @@ img {
   grid-template-columns: 1fr;
   grid-gap: 2%;
   padding-bottom: 5px;
-  background-color: #AED6F1;
+  background-color: #7FDBFF;
   color: #000000;
   align-items: start;
   align-content: space-around;
   justify-content: space-between;
   }
 
-
   .greetings {
-  background-color: #156fbf;
+  background-color: #0074D9;
   color: #ffffff;
   grid-template-columns: 1fr;
   grid-gap: 2%;
@@ -452,38 +585,27 @@ img {
     padding: 20px;
     font-size: 80%;
 }
-
-/*p.q_a2 {
-    font-family: Bungee, sans-serif;
-    font-size:12px;
-    color:#000000;
-  
-.align {
-  text-align: center;
-  font-size: 20px;
-  }
-
-
  .main_center {
     display: block;
     height: 180px;
     padding-right:10px;
   }
 
-.bordertown {
+ .borderbox {
 /*  display: inline-flex;*/
 /*  vertical-align: middle;*/
   border-style: solid;
   border-width: thick;
-  color: #156fbf;
+  color: #0074D9;
 }
 
-  .bordertown_reverse {
+ .borderbox_reverse {
   border-style: solid;
   border-width: thick;
   color: #ffffff;
 }
-.bordertown_reverse_small {
+
+.borderbox_reverse_small {
   display: inline-flex;
   vertical-align: middle;
   border-style: solid;
@@ -495,7 +617,7 @@ li {
 /*  line-height: 2.5;*/
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
-  color: #156fbf;
+  color: #0074D9;
 }
 }
 @media (orientation: landscape) {
@@ -509,13 +631,33 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2%;
-  background-color: #AED6F1;
+  background-color: #fff;
   color: #000000;
   align-items: start;
   align-content: space-around;
   justify-content: space-between;
   } 
 
+}
+
+@media all and (max-width: 800px) {
+  ul {
+    grid-gap: .25em;
+  }
+  
+  ul.weekdays li {
+    font-size: 0;
+  }
+  
+  ul.weekdays > li abbr:after {
+      content: attr(title);
+      font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
+    text-align: center;
+    }
+
+.borderbox_reverse_small{
+  margin-bottom: 2%;
+}
 }
 /*
 @media only screen and (min-width: 320px) and (min-height: 250px) {
@@ -530,7 +672,7 @@ li {
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 2%;
-  background-color: #AED6F1;
+  background-color: #7FDBFF;
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -562,11 +704,8 @@ li {
 /*.greetings *, .box *, .aside *{
   width:95%;
   margin-left: 0;
-}*/
-
-.bordertown_reverse_small{
-  margin-bottom: 2%;
 }
+*/
 
 @media screen and (max-width: 785px) {
   .nav a {display: none;}
@@ -581,13 +720,13 @@ li {
 }
 
   .nav a:active { 
-    background-color: #156fbf;
+    background-color: #0074D9;
     color: #ffffff;
   }
   .nav ul{max-width: 1px;}
-  .nab li{
-    display: none;
+  .nav li{
     float: right;
+    font-size: 18px;
   }
   img {}
 .doubleimg {
@@ -613,7 +752,7 @@ li {
 }
 /* give active link (when clicked or activated a color and background color*/
 .nav.responsive li a:active { 
-    background-color: #000;
+    background-color: #7FDBFF;
     color: #0a10b1;
 }
 .nav.responsive li a.current {
@@ -653,7 +792,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2%;
-  background-color: #AED6F1;
+  background-color: #fff;
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -665,20 +804,5 @@ li {
     height: 300px;
     padding:10px;
 }
-/*  h1 {
-    font-size: 26px;
-  }
-*/
-h1{
 
-}
-.align {
-  text-align: center;
-  font-size: 20px;
-  }
-
- /*main{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
- }*/
 }
