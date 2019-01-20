@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- class="background" -->
+<html lang="en">
 <head>
+    <meta charset="utf-8">
      <title>Events Page</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cShrikhand%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cMontserrat+Alternates:900%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro%7cLato' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="shortcut icon" href="images/favicon.ico">
   </head>
-</head>
 <body><main>
-      <header>
+       <header>
       <div class="circle">
         <img src="images/b_e_logo.png"  height="100" width="100" alt="B & Games logo"/>
       </div>
-      <nav roll="navigation">
+      <nav>
         <div class="nav" id="myNav">
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i></a>
@@ -29,42 +30,140 @@
       </nav>
     </header>
    <br/>
-<img src="images/b_e_logo.png" alt="B & E Games stylized letters logo" class="center">
+<!-- I need to be centered appropriately -->
+<h1>In-Store Events</h1>
 <br>
-	<h2>In-Store Events</h2>
-<div class="box q_a">       
-    <p class="q_a2">Q & A Session</p>
-    <div id="doubleimage">
-<div class="bordertown">
+<br>
+<br>
+
+<!-- Accordion-Calendar-Section -->
+
+<!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-1">
+      <h2 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-label="pair of dice used to toggle accordion open or closed">
+        Event Calendar
+        </a>
+        </h2>
+      </div>
+  <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+      <div class="panel-body"> -->
+<!-- Testing a Flexbox-based calendar-->
+
+<h1 id="align">Event Calendar</h1>
+  <div id="calendar">
+    <div id="calendar_header">
+      <i class="fas fa-chevron-left" aria-label="Left Chevron for going back"></i>        
+      <h1></h1>
+      <i class="fas fa-chevron-right" aria-label="Right chevron for going forward"></i>
+    </div>
+    <div id="calendar_weekdays"></div>
+    <div id="calendar_content"></div>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--- Accordion-Q+A-Section -->
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-1">
+      <h2 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-label="pair of dice used to toggle accordion open or closed">
+        Q & A Session
+        </a>
+        </h2>
+      </div>
+      <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+        <div class="panel-body">
+          <div class="box q_a"> <div class="wrapper-grid">  
+      <article> 
+      <h2> Meet & Greet!</h2>
+      <p class="overflow">Meet the creator of Settlers of Catan, Klaus Teuber! This is a one of a kind event experience as players of this all-time favorite will be able to hear Klaus speak, learn never before revealed secrets of the Catan Series!</p></article><img src="images/klaus.png" alt="Photo of Klaus Tauber, Catan Creator"><br></div>
+<div class="borderbox"><article>
     <ol>
         <li>GAME: The Settlers of Catan</li>
         <li>STUDIO: Catan Studios</li> 
         <li>PRICE: $49.00</li> 
-        <li>DETAILS: 3-4 Players, 60 minutes, Ages 10 and up</li>
+        <li>DETAILS: 3-4 Players, 60 minutes, Ages 10 and up! </li>
     </ol>
-</div><img src="images/catan.jpg" alt="game cover for 'Settlers of Catan'" class="game">
-<p>Meet the creator of Settlers of Catan, Klaus Teuber! This is a one of a kind event experience as players of this all-time favorite will be able to hear Klaus speak, learn never before revealed secrets of the Catan Series!</p>
-<img src="images/klaus.jpg" alt="Photo of Klaus Tauber, Catan Creator" class="center_jewels">
-</div></div><br>
-<div class="box q_a">        
-    <p class="q_a2">Tournament of Splendor</p>
+</article><aside><div style="text-align: right"><img src="images/catan.png" alt="game cover for 'Settlers of Catan'"></div></aside></div></div>
+</div></div>
+      </div>
 
-    <div class="bordertown">
-  <ol>
+<!--- Accordion-Tourney-Section -->
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-2">
+      <h2 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" aria-label="pair of dice used to toggle accordion open or closed">
+        Tournament of Splendor
+        </a>
+        </h2>
+      </div>
+      <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+        <div class="panel-body">
+          <div class="box q_a"> <div class="wrapper-grid">
+          <aside>   
+    <div class="borderbox"><img src="images/splendor.png" alt="cover of game box for 'Splendor'"></div>
+  </aside><article><ol>
         <li>GAME: Splendor</li>
         <li>STUDIO: Asmodee Studios</li> 
         <li>PRICE: $39.99</li> 
         <li>DETAILS: 2-4 Players, 30 minutes, Ages 10 and up</li>
-    </ol></div>
-<img src="images/splendor.jpg" alt="cover of game box for 'Splendor'" class="game">
-<p>Join us for a day of Splendor! Can you trade and collect enough gems to win the heart of the nobles? Or will you be stuck with a stockpile of cards with no place to go. Spaces are Limited, call for details.</p>
-<img src="images/splendor2.png" alt="group of 'Splendor' jewel tokens" class="center_jewels"></div><br>
-<h2>In-Store Demonstrations</h2>
-<div class="greetings"><div class="bordertown_reverse background">
+    </ol></article></div>
+<article><p>Join us for a day of Splendor! Can you trade and collect enough gems to win the heart of the nobles? Or will you be stuck with a stockpile of cards with no place to go. Spaces are Limited, call for details.</p></article>
+<img src="images/splendor2.png" alt="group of 'Splendor' jewel tokens" class="center_jewels"></div></div></div></div>
+
+<!--- Accordion-In-Store-Demos -->
+
+<div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="heading-3">
+      <h2 class="panel-title">
+          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3 aria-label="pair of dice used to toggle accordion open or closed"">
+          In-Store Demonstrations
+        </a>
+       </h2>
+    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+      <div class="panel-body">
+<div class="greetings"><div class="borderbox_reverse background">
 <ul>
     <li class="li2-circle-white">Highlander 11/18/18 - Spaces Limited - 6pm</li>
     <li class="li2-circle-white">Boss Monster 3: Rise of the Minibosses 11/28/18 and 11/29/18 - 2pm</li>
-</ul></div></div>
+</ul></div></div></div></div></div></div></div>
+
+<!-- Start Footer Section -->
 <div id="cust-footer"></div>
     <div class="footer-container container text-center">
       <img class="footer-logo" src="images/b_e_logo.png" alt="B & E Stylized Text Company Logo"/>
@@ -94,6 +193,11 @@ $(function(){
     }
   });
 });
-</script></main>
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</main>
+<!--     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script> -->
+    <script src="js/javascript.js"></script>
   </body>
 </html>
