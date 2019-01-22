@@ -1,53 +1,12 @@
-
-
-*{
-	box-sizing: border-box;
-}
-
-/* Container needed to position the overlay. Adjust the width as needed */
-.container2 {
-  position: relative;
-  width: 50%;
-  max-width: 300px;
-}
-
-/*/* Make the image to responsive
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}*/
-
-/* overlay effect for carousel - lays on top of the container and over the image */
-/*.overlay {
-  position: absolute; 
-  bottom: 0; 
-  background: #000;
-  background: rgba(0, 0, 0, 0.5); /* Black see-through 
-  color: #f1f1f1; 
-  width: 100%;
-  transition: .5s ease;
-  opacity:0;
-  color: white;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;*/
-}
-
-/* When you mouse over the container, fade in the overlay title */
-.container2:hover .overlay {
-  opacity: 1;
-}
-
 html {
   min-height: 100%;
   background-color: #7FDBFF;
 }
 .background {
    background: url("../images/cardgames_bg.png");
-   /*opacity: 0.5;
-   filter: alpha(opacity=50); /* For IE8 and earlier
-   z-index: -1;*/
+   /*opacity: 0.5;*/
+   filter: alpha(opacity=50); /* For IE8 and earlier*/
+   z-index: -1;
 }
 
 body {
@@ -56,6 +15,29 @@ body {
   font-family: 'PT Sans', sans-serif;
   background-color: #7FDBFF;
 }
+
+/* overlay effect for index page carousel - lays on top of the container and over the image */
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: #000;
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* When you mouse over the container, fade in the overlay title*/ 
+.carousel-cell:hover .overlay {
+  opacity: 1;
+}
+
+
+/* End Carousel Overlay attempt*/
 
 .container.main-content-area {
   display: none;
@@ -76,7 +58,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 48%);
   grid-gap: 2%;
-  background-color: #fff;
+/*  background-color: #fff;*/
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -106,7 +88,7 @@ body {
 .greetings{
 	background-color: #0074D9;
 	color: #ffffff;
-  	border-radius: 5px;
+  	border-radius: 12px;
   	padding: 20px;
   	font-size: 150%;
 }
@@ -231,8 +213,9 @@ body {
 #calendar_content div{
   float: left;
 }
+/* Hover over grid square color in DIV*/
 #calendar_content div:hover{
-  background-color: #F8F8F8;
+  background-color: #fdb81e;
 }
 #calendar_content div.blank{
   background-color: #575757;
@@ -240,7 +223,7 @@ body {
 #calendar_header, #calendar_content div.today{
   zoom: 1;
   filter: alpha(opacity=70);
-/*  opacity: 0.7;*/
+  opacity: 0.7;
 }
 #calendar_content div.today{
   color: #FFFFFF;
@@ -255,11 +238,17 @@ body {
   -moz-border-radius: 12px 12px 0px 0px; 
   border-radius: 12px 12px 0px 0px;
 }
-#calendar_header h1{
+#calendar_header h6{
   font-size: 1.5em;
   color: #FFFFFF;
   float:left;
   width:70%;
+}
+i[class*="fa-chevron-"]{
+  color: #FFFFFF;
+  float: left;
+  width: 15%;
+  border-radius: 50%;
 }
 /* End Dynamic Calendar Stuff*/
 
@@ -342,6 +331,7 @@ i.fa::before{
 i.fas::before{
   color:#fdb81e;
 }
+/* This is needed to call the set this iclass attribute properly*/
 
 footer, address, p.hours {
   text-align: center;
@@ -354,6 +344,7 @@ footer, address, p.hours {
   text-indent: 2em;
   font-size: 2vw;
   font-family:Baloo;
+  text-align: center;
   color: #000000;
   padding:2px;
 }
@@ -384,6 +375,11 @@ p.white_head {
     color:#ffffff;
 }
 
+p.black_head {
+    font-family: Baloo, sans-serif;
+    font-size:20px;
+    color:#000;
+}
 p.code_o {
     font-family: 'Source Code Pro', monospace;
     color:#000000;
@@ -423,7 +419,7 @@ ul{
 }
 
 img {
-  max-width: 100%;
+/*  max-width: 100%;*/
   height: auto;
 	margin-left: auto;
     margin-right: auto;
@@ -552,7 +548,7 @@ img {
   grid-template-columns: 1fr;
   grid-gap: 2%;
   padding-bottom: 5px;
-  background-color: #fff;
+/*  background-color: #fff;*/
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -579,7 +575,7 @@ img {
   grid-gap: 2%;
     border-radius: 5px;
     padding: 20px;
-    font-size: 80%;
+    font-size: 90%;
 }
  .main_center {
     display: block;
@@ -627,7 +623,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2%;
-  background-color: #fff;
+/*  background-color: #fff;*/
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -788,7 +784,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 2%;
-  background-color: #fff;
+/*  background-color: #fff;*/
   color: #000000;
   align-items: start;
   align-content: space-around;
