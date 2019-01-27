@@ -183,7 +183,7 @@ input[type=text], input[type=email] {
   box-sizing: border-box;
   border: none;
   background-color: #7FDBFF;
-  color: yellow;
+  color: #000;
 }
 
 /* add a color border to the open text field.*/
