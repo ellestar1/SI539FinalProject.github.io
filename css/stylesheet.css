@@ -66,7 +66,6 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 48%);
   grid-gap: 2%;
-/*  background-color: #fff;*/
   color: #000000;
   align-items: start;
   align-content: space-around;
@@ -115,6 +114,211 @@ body {
   grid-gap: 2%;
 }
 
+  /* -- This is a fancy pants flip panel based on https://css3playground.com/3d-flip-cards/ *
+  /* make sure to declare a default for every property that you want animated -- */
+  /* -- general styles, including Y axis rotation -- */
+
+  /* Create Grid-ception */
+/*
+                     o,//(//oooo/oo/oooo,oo,,,., ..                            
+                   oo//(oo,..,,,,ooo/o.,   .......,,.        .///o             
+                ..,o/(/,.,. ..,o,,,.,oo, .   ......,,.       .o//o             
+               .,,,o/oo,   ..,o.o,ooo,,,,,,......,.....                        
+              ,,.,.,o/,  oo,,,,.,,,,,,,o,,,,,,,,,,,,..                         
+             ,,,...,,, .////////////,ooooooo/oooooo,,..              /##,      
+              ..  .   ,//////(/((((((//////////oo,o,,.,.            o%%%%.    .
+             ,,..   .o////////(((((((//////////ooo,,,.,..            /##/     .
+                   ,ooo///////((((((/////(//////oooo,.,,.                ..... 
+                  .oooo////////(((((((//////////ooo,,,,,.    ,.          ...,..
+ ,//o             .,oo/o///////(((((((///(/////ooooo,,,,..  .%            .,o
+ o///             .,oo//o///////((((((///((/////oooooo,,,..  .%#.           .,,
+  ..               ,,o//////////(((((((/((((/(//oo,........  ..        ........
+                  ..,o/////////////((/(//////o,.  .,,... ... .                 
+      o///,  (,   .,ooo//oo,,,.. ...,o//////o,,,,,,..,..,.....                 
+      .o/o   ,,o  .,oooo,.,oo////o,,,,,o///o,..,,,,oo.,,,,,..,               ..
+             oo/o  ,o/o/oo,o,.../,oo,oo/((/o,oooooooooooo,,...             ....
+              /oo,,,oo///////o///ooo//(//(/o,,ooo//////oo,,...           ..,,oo
+               ////oooo/////((//////(///////,,oo///////oo,,...          .,/(##(
+               ,o//oooo/////((((((((((////(/o,o,o//////oo,..      ..     .,/((/
+.             (((///oooo////((((((((o/////((/,,,,oo///ooo,..     (&&&o         
+#o           .((#(///ooooo/////(///o//oo,,oo,.,,,,oooooo,...    .%&&         
+(.            .,,  ,o,oooooo//////o/////oo,,,,,,,,,oooo,,,,.     ./(/.         
+                      ,ooo//ooo//o///////(////ooo,..,oo,o,,.                   
+                       ,oo//////////oo,oo,,oo/ooo,,o/oo,o,,.                   
+                        ,oo/////(//((((///////ooo,ooo,,,,..                    
+                         ,,oo///o////(//////oooooooo,,.,.                      
+                        ./,,,ooooooo////((((////ooo,,...                       
+                        ##oo,,,,,oooo///////////o,,...                         
+                       ####ooo,,..,,,,oooooooooo,,..  ..o                      
+                      /#####/oooo,,.,,,,,,,,,,...   ...,o                      
+          ....        ,#####%%(oooo,..... ...     ....,oo      .               
+     .......           o###%%%%%%/ooo,,...   ......../ooo,      ...   ...      
+..........              (#%%%%%%%%%#oo,,,,,,,,,,,..//oooo,        ..........   
+.......                  (%%%%%%%%%%%%/,oooooo,,o,     oo,           ....      
+..                        (%%%%%%o     o/ooo,o(         oo                     
+                           (%%%%(.                       .                     
+                            (#%%%o         o                                   
+                             (#%%/                                             
+                              .#%%/       ,o////(o,..                          
+                                o%o,.,oo//(((((//((/oo,                        
+                                  /(#(((#########(((((/                        
+                                   /%%%%%%##%#######((.                        
+                                    .%%%%%%%%%%%#####(                         
+                                      #%%%%%%%%%#####,                         
+                                       #%%%%%%%%#####                          
+                                        /%%%%%%%####                           
+                                         .%%%%%%###(                           
+                                           #%%%%###                            
+                                            (%%%##o                            
+                                             o%%##                             
+                                              ,##.                             
+                                                ,                      */        
+/* OK, that's enough Leo*/
+
+/* Color and identify the text and email fields.*/
+input[type=text], input[type=email] {
+  width: 100%;
+  padding: 4px 4px;
+  margin: 1px 1px;
+  box-sizing: border-box;
+  border: none;
+  background-color: #7FDBFF;
+  color: #000;
+}
+
+/* add a color border to the open text field.*/
+textarea{
+  width: 100%;
+  padding: 4px 4px;
+  margin: 1px 1px;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  resize: none;
+/*  background-color: #7FDBFF;
+  color: yellow;*/
+}
+
+/* Dealing with those pesky buttons*/
+input[type=submit], input[type=button] {
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+
+.flippanel {
+/*    float: left;*/
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2%;
+    margin: 0 auto;
+    position: relative;
+    font-size: .8em;
+    -webkit-perspective: 600px;
+            perspective: 600px;
+
+  /*.panel {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    font-size: .8em;
+    -webkit-perspective: 600px;
+            perspective: 600px;*/
+  }
+  /* -- make sure to declare a default for every property that you want animated -- */
+  /* -- general styles, including Y axis rotation -- */
+
+  .flippanel .front {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 900;
+    width: inherit;
+    height: inherit;
+    border: 2px solid #e31c3d;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  .flippanel.flip .front {
+    z-index: 900;
+    border-color: #eee;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+    -webkit-transform: rotateY(179deg);
+            transform: rotateY(179deg);
+  }
+  .flippanel .back {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    width: inherit;
+    height: inherit;
+    border: 2px solid #e31c3d;
+    background: #333;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+    -webkit-transform: rotateY(-179deg);
+            transform: rotateY(-179deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            
+    /* -- transition is the magic sauce for animation -- */
+    -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+  }
+  .flippanel.flip .back {
+    z-index: 1000;
+    background: #fff;
+    -webkit-transform: rotateX(0) rotateY(0);
+            transform: rotateX(0) rotateY(0);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.2);
+  }
+  /* -- X axis rotation for click panel -- */
+ 
+  .click.flip .front {
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+  }
+
+  .click.flip .back {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+
+  /* -- contact panel -- */
+  .contact {
+    width: 290px;
+    height: 310px;
+  }
+  /* -- cosmetics -- */
+  .flippanel .pad {padding: 0 15px; }
+  .flippanel.flip .action {display: none; }
+  .block ol li {text-align: left; margin: 0 0 0 28px; }
+  .block .action {display: block; padding: 3px; background: #333; text-align: right; font-size: .8em; opacity: 0; position: absolute; cursor: pointer; -webkit-transition: opacity .2s linear; }
+  .block:hover .action {opacity: .7; }
+
+
+
+
+/* end flip panel stuff*?
+/*---------------------------*/
+
 #navigation li {
   box-sizing: border-box;
   display: inline;   /* Make our navigation display in a line */
@@ -136,6 +340,9 @@ body {
 .nav ul{
   float: right;
   padding-left: 0px;
+  /*needed to override bootstrap accordions in later use*/
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 .nav li{
     float: left;
@@ -231,7 +438,7 @@ body {
 #calendar_header, #calendar_content div.today{
   zoom: 1;
   filter: alpha(opacity=70);
-  opacity: 0.7;
+/*  opacity: 0.7; removed because not WCAG compatible*/
 }
 #calendar_content div.today{
   color: #FFFFFF;
@@ -248,7 +455,7 @@ body {
 }
 #calendar_header h6{
   font-size: 1.5em;
-  color: #FFFFFF;
+  color: #000;
   float:left;
   width:70%;
 }
@@ -276,20 +483,21 @@ a.current {
 
 article,
 aside{
-  /*background: #eaeaea;*/
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
 
 }
+/* note changes of li to black from #429CEA for WACG*/
 li {
   line-height: 2.5;
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
-  color: #429CEA;
+  color: #000;
 }
 
+/* hollow white circle in list on events page*/
 .li2-circle-white {
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
@@ -297,7 +505,7 @@ li {
   color: #ffffff;
   font-weight: bold;
 }
-
+/* regular white font in list on product page against dark blue background #0074D9*/
 .li3-white {
   /*line-height: 1.5;*/
   font-family: Arial, Helvetica, sans-serif;
@@ -360,6 +568,12 @@ footer, address, p.hours {
 .big {
   font-size: 4vw;
   }
+
+h2 {
+  font-family: Baloo, sans-serif;
+  text-align: center;
+}
+
 h2.arttitle{
     font-family: Baloo, sans-serif;
     font-size: 2em;
@@ -373,6 +587,12 @@ h2.arttitle{
     font-family: Baloo, sans-serif;
     font-size: 2em;
     color:#000000;
+}
+
+h3{
+    font-family: 'Baloo', monospace;
+    color:#000;
+    text-align:center;
 }
 
 p {
@@ -394,6 +614,11 @@ p.black_head {
 p.code_o {
     font-family: 'Source Code Pro', monospace;
     color:#000000;
+}
+
+p.code_o_fonts {
+    font-family: 'Baloo', sans-serif;
+    color:#000;
 }
 
 p.lefty-o {
@@ -465,21 +690,13 @@ img {
 
 .game {
     display: inline-block;
-/*    vertical-align: middle;*/
-/*    width: 200px;*/
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4px;
     padding-bottom: 4px;
 }
 
-/*.overflow {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  hyphens: auto;
-}*/
-
-
+/* This exists to put a #fff circle behind the logo on each page*/
 .circle-overlay {
   position: absolute;
   top: 5px;
@@ -597,11 +814,11 @@ img {
   }
 
  .borderbox {
-/*  display: inline-flex;*/
-/*  vertical-align: middle;*/
+  display: grid;
   border-style: solid;
   border-width: thick;
   color: #0074D9;
+  padding:10px;
 }
 
  .borderbox_reverse {
@@ -616,6 +833,11 @@ img {
   border-style: solid;
   border-width: thick;
   color: #ffffff;
+}
+
+h2 {
+  font-family: Baloo, sans-serif;
+  text-align: center;
 }
 
 h2.arttitle{
@@ -649,7 +871,7 @@ li {
 /*  line-height: 2.5;*/
   font-family: Arial, Helvetica, sans-serif;
   list-style-type: none;
-  color: #0074D9;
+  color: #000;
 }
 }
 @media (orientation: landscape) {
@@ -692,7 +914,18 @@ li {
   }
 }
 
+
 @media screen and (max-width: 785px) {
+  body.box{
+    background-color: #ffffff;
+    font-family: Baloo, sans-serif;
+    font-size:12px;
+  }
+ .contact {
+    width: 290px;
+    height: 240px;
+  }
+
   h1{
     font-size: 16px;
   }
@@ -705,7 +938,7 @@ li {
 
   .nav a:hover {
     color: #fff;
-}
+  }
 
   .nav a:active { 
     background-color: #0074D9;
@@ -717,7 +950,7 @@ li {
     font-size: 18px;
   }
   img {}
-.doubleimg {
+  .doubleimg {
     display: inline-block;
     width: 100px;
     padding:10px;
@@ -725,10 +958,7 @@ li {
  .center {
     display: block;
     width: 150px;
-} 
-}
-
-@media screen and (max-width: 785px) {
+  } 
   .nav.responsive.icon {
     position: absolute;
     display: block;
@@ -737,15 +967,15 @@ li {
   }
   .nav.responsive li a:hover {
   color: #FFC100;
-}
-/* give active link (when clicked or activated a color and background color*/
-.nav.responsive li a:active { 
+  }
+  /* give active link (when clicked or activated a color and background color*/
+  .nav.responsive li a:active { 
     background-color: #7FDBFF;
     color: #0a10b1;
-}
-.nav.responsive li a.current {
+  }
+  .nav.responsive li a.current {
   color: #000;
-}
+  }
   .nav.responsive {
     position: relative;
   }
@@ -768,16 +998,15 @@ li {
   }
   .carousel-cell {
   width: 75%;
-}
-article,
-aside{
-  /*background: #eaeaea;*/
-  display: block;
+  }
+  article,
+  aside{
+  display: inline-grid;
   align-items: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
+  }
 }
-
 @media only screen and (min-width: 785px)  {
 
   body {
