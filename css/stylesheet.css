@@ -303,7 +303,7 @@ input[type=submit], input[type=button] {
 
   /* -- contact panel -- */
   .contact {
-    width: 290px;
+    width: 280px;
     height: 310px;
   }
   /* -- cosmetics -- */
@@ -912,7 +912,7 @@ li {
 }
 
 @media screen and (max-width: 785px) {
-  
+
 body.box{
     background-color: #ffffff;
     font-family: Baloo, sans-serif;
@@ -923,7 +923,7 @@ body.box{
     height: 240px;
   }
 
-  h1{
+h1{
     font-size: 16px;
   }
   .nav a {display: none;}
@@ -946,7 +946,10 @@ body.box{
     float: right;
     font-size: 18px;
   }
-  img {}
+
+  img {
+
+  }
 .doubleimg {
     display: inline-block;
     width: 100px;
@@ -956,9 +959,8 @@ body.box{
     display: block;
     width: 150px;
 } 
-}
 
-@media screen and (max-width: 785px) {
+
   .nav.responsive.icon {
     position: absolute;
     display: block;
@@ -1005,8 +1007,8 @@ aside{
   align-items: center;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
+  }
 }
-
 @media only screen and (min-width: 785px)  {
 
   body {
