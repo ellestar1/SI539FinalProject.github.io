@@ -26,7 +26,8 @@ body {
   width: 100%;
   transition: .5s ease;
   opacity:0;
-  color: white;
+  /*color: #fff;*/ /*Not necessary for WCAG*/
+  color: #e31c3d;
   font-size: 18px;
   text-align: center;
 }
@@ -243,8 +244,7 @@ textarea{
   box-sizing: border-box;
   border: 1px solid #000;
   resize: none;
-/*  background-color: #7FDBFF;
-  color: yellow;*/
+  color: #000;
 }
 
 /* Dealing with those pesky buttons*/
@@ -648,14 +648,10 @@ h2 {
   text-align: center;
 }
 
-h2.arttitle{
-    font-family: Baloo, sans-serif;
-    font-size: 2em;
-    color:#000000;
-    display:flex;
-    -webkit-transform:rotate(-90deg);
+h2.black{
+    font-family: 'Baloo', monospace;
+    color:#000;
     text-align:center;
-    white-space: nowrap;
 }
 .panel-title{
     font-family: Baloo, sans-serif;
@@ -1028,7 +1024,7 @@ li {
     grid-gap: .25em;
   }
   
-  ul.weekdays li {
+  /*ul.weekdays li {
     font-size: 0;
   }
   
@@ -1037,7 +1033,7 @@ li {
       font-size: calc(16px + (26 - 16) * ((100vw - 300px) / (1600 - 300)));
     text-align: center;
     }
-
+*/
 .borderbox_reverse_small {
   margin-bottom: 2%;
   }
