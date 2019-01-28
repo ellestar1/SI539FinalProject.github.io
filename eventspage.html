@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cMontserrat+Alternates:900%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro%7cLato' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cMontserrat+Alternates:900%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="shortcut icon" href="images/favicon.ico">
 </head>
@@ -39,7 +40,7 @@
         </header>
         <br/>
         <!-- I need to be centered appropriately -->
-        <h1>In-Store Events</h1>
+        <h1 class="big">In-Store Events</h1>
         <br>
         <br>
         <br>
@@ -59,12 +60,12 @@
       <div class="panel-body"> -->
         <!-- Testing a Flexbox-based calendar-->
 
-        <!-- <h1 id="align">Event Calendar</h1> -->
+        <!-- <h1 id="align">Event Calendar</h1>
         <div id="calendar">
             <div id="calendar_header">
-                <i class="fas fa-chevron-left" aria-label="Left Chevron for going back a month"></i>
-                <h6></h6>
-                <i class="fas fa-chevron-right" aria-label="Right chevron for going forward a month"></i>
+                <i class="fas fa-chevron-left" aria-label="Left Chevron for going back a month"></i> -->
+        <!--  <h6></h6> -->
+        <!--  <i class="fas fa-chevron-right" aria-label="Right chevron for going forward a month"></i>
             </div>
             <div id="calendar_weekdays"></div>
             <div id="calendar_content"></div>
@@ -100,7 +101,7 @@
         <br>
         <br>
         <br>
-        <br>
+        <br> -->
 
         <!--- Accordion-Q+A-Section -->
 
@@ -108,90 +109,153 @@
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading-1">
                     <h2 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-label="pair of dice used to toggle accordion open or closed">
-        Q & A Session
-        </a>
-        </h2>
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-label="pair of dice used to toggle accordion open or closed">
+                            Q & A Session
+                        </a>
+                    </h2>
                 </div>
                 <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
                     <div class="panel-body">
-                        <div class="box q_a">
+                        <div class="box">
                             <div class="wrapper-grid">
+                                <div class="borderbox-table">
+                                    <article>
+                                        <div style="text-align: left"><img class="center_it top-text" src="images/catan.png" alt="game cover for 'Settlers of Catan'">
+                                        </div>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GAME:</td>
+                                                    <td>The Settlers of Catan</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>STUDIO:</td>
+                                                    <td>Catan Studios</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PRICE:</td>
+                                                    <td>$49.00 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PLAYERS:</td>
+                                                    <td>3-4 Players</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TIME:</td>
+                                                    <td>60 mins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AGES:</td>
+                                                    <td>10 and up! </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </article>
+                                </div>
+
                                 <article>
                                     <h2> Meet & Greet!</h2>
-                                    <p class="overflow">Meet the creator of Settlers of Catan, Klaus Teuber! This is a one of a kind event experience as players of this all-time favorite will be able to hear Klaus speak, learn never before revealed secrets of the Catan Series!</p>
-                                </article><img src="images/klaus.png" alt="Photo of Klaus Tauber, Catan Creator">
-                                <br>
+                                    <p class="justified">
+                                        In Catan (formerly The Settlers of Catan), players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces. Players collect these resources (cards)—wood, grain, brick, sheep, or stone—to build up their civilizations to get to 10 victory points and win the game.</p>
+                                    <p class="justified">
+                                        Meet the creator of Settlers of Catan, Klaus Teuber! This is a one of a kind event experience as players of this all-time favorite will be able to hear Klaus speak, learn never before revealed secrets of the Catan Series!</p>
+                                    <!--  <div class="container_overlay"> --><img src="images/klaus.png" alt="Photo of Klaus Tauber, Catan Creator" class="bottom-text" />
+                                    <!-- <div class="overlay">Join the Battle for Hogwarts!</div> -->
                             </div>
-                            <div class="borderbox">
-                                <article>
-                                    <ol>
-                                        <li><span style="font-weight:900">GAME:</span> The Settlers of Catan</li>
-                                        <li><span style="font-weight:900">STUDIO:</span> Catan Studios</li>
-                                        <li><span style="font-weight:900">PRICE:</span> $49.00</li>
-                                        <li><span style="font-weight:900">DETAILS:</span> 3-4 Players, 60 minutes, Ages 10 and up! </li>
-                                    </ol>
-                                </article>
-                                <aside>
-                                    <div style="text-align: right"><img src="images/catan.png" alt="game cover for 'Settlers of Catan'">
-                                    </div>
-                                </aside>
-                            </div>
+                            <br>
+                            </article>
                         </div>
                     </div>
                 </div>
             </div>
+
 
             <!--- Accordion-Tourney-Section -->
 
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading-2">
                     <h2 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" aria-label="pair of dice used to toggle accordion open or closed">
-        Tournament of Splendor
-        </a>
-        </h2>
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" aria-label="pair of dice used to toggle accordion open or closed">
+                            Tournament of Splendor
+                        </a>
+                    </h2>
                 </div>
                 <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
                     <div class="panel-body">
-                        <div class="box q_a"> <h2>A Tournament of Splendor!</h2>
+                        <div class="box">
+                            <h2>A Tournament of Splendor!</h2>
                             <div class="wrapper-grid">
-                        <article>
-                                <p class="overflow">Join us for a day of Splendor! Can you trade and collect enough gems to win the heart of the nobles? Or will you be stuck with a stockpile of cards with no place to go. Spaces are Limited, call for details.</p>
-                            </article>
-   <section>
-                                    <div class="borderbox"><img src="images/splendor.png" alt="cover of game box for 'Splendor'">
-                              <ol>
-                                        <li><span style="font-weight:900">GAME:</span> Splendor</li>
-                                        <li><span style="font-weight:900">STUDIO:</span> Asmodee Studios</li>
-                                        <li><span style="font-weight:900">PRICE:</span> $39.99</li>
-                                        <li><span style="font-weight:900">DETAILS:</span> 2-4 Players, 30 minutes, Ages 10 and up</li>
-                                    </ol>
-   </section>
+                                <article>
+                                    <p class="justified">
+                                        Splendor is a game of chip-collecting and card development. Players are merchants of the Renaissance trying to buy gem mines, means of transportation, shops—all in order to acquire the most prestige points. If you're wealthy enough, you might even receive a visit from a noble at some point, which of course will further increase your prestige.</p>
+
+                                    <p>Join us for a day of Splendor! Can you trade and collect enough gems to win the heart of the nobles? Or will you be stuck with a stockpile of cards with no place to go. Spaces are Limited, call for details.</p>
+                                </article>
+
+
+                                <div class="borderbox-table"><img src="images/splendor.png" alt="cover of game box for 'Splendor'" class="center_it">
+                                    <article>
+                                        <table>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td>GAME:</td>
+                                                <td>Splendor</td>
+                                            </tr>
+                                            <tr>
+                                                <td>STUDIO:</td>
+                                                <td>Asmodee Studios</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PRICE:</td>
+                                                <td>$39.99 USD</td>
+                                            </tr>
+                                            <tr>
+                                                <td>PLAYERS:</td>
+                                                <td>2-4 Players</td>
+                                            </tr>
+                                            <tr>
+                                                <td>TIME:</td>
+                                                <td>30 mins</td>
+                                            </tr>
+                                            <tr>
+                                                <td>AGES:</td>
+                                                <td>Ages 10 and up! </td>
+                                            </tr>
+
+                                        </table>
+                                    </article>
+                                </div>
                             </div>
-                            
-                            <img src="images/splendor2.png" alt="group of 'Splendor' jewel tokens" class="center_jewels">
+                            <img src="images/splendor2.png" alt="group of 'Splendor' jewel tokens" class="center_jewels" />
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
+
             <!--- Accordion-In-Store-Demos -->
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading-3">
                     <h2 class="panel-title">
-          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" aria-label="pair of dice used to toggle accordion open or closed">
-          In-Store Demonstrations
-        </a>
-       </h2>
-                    <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
-                        <div class="panel-body">
-                            <div class="greetings">
-                                <div class="borderbox_reverse background">
-                                    <ul>
-                                        <li class="li2-circle-white">Highlander 11/18/18 - Spaces Limited - 6pm</li>
-                                        <li class="li2-circle-white">Boss Monster 3: Rise of the Minibosses 11/28/18 and 11/29/18 - 2pm</li>
-                                    </ul>
-                                </div>
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" aria-label="pair of dice used to toggle accordion open or closed">
+                            In-Store Demonstrations
+                        </a>
+                    </h2>
+                </div>
+                <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+                    <div class="panel-body">
+                        <div class="farewell">
+                            <div class="borderbox_reverse background">
+                                <ul>
+                                    <li class="li2-circle-white">Highlander 11/18/18 - Spaces Limited - 6pm</li>
+                                    <li class="li2-circle-white">Boss Monster 3: Rise of the Minibosses 11/28/18 and 11/29/18 - 2pm</li>
+                                </ul>
                             </div>
                         </div>
                     </div>

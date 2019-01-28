@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <title>Products Page</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <title>Events Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cMontserrat+Alternates:900%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="shortcut icon" href="images/favicon.ico">
-</head>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <div class="circle">
                 <img src="images/b_e_logo.png" height="100" width="100" alt="B & Games logo" />
             </div>
-            <nav roll="navigation">
+            <nav>
                 <div class="nav" id="myNav">
                     <a href="javascript:void(0);" aria-label="this is a link for the Nav bar" class="icon" onclick="myFunction()">
                         <i class="fa fa-bars" aria-label="Navigational Bars image to instruct and expand links"></i>
@@ -38,117 +38,258 @@
                 </div>
             </nav>
         </header>
-        <main>
-            <br>
-            <h2>New Releases</h2>
-            <main>
-                <h3> Check out what's new at B & E!</h3>
-                <div class="greetings">
-                    <p class="white_head">Releasing the week of December 8th, 2018:</p>
-                    <img src="images/highlander.jpg" alt="banner for Highlander: The Board Game Box" class="game">
-                    <br>
-                    <div class="borderbox_reverse_small">
-                        <br>
-                        <ol>
-                            <li class="li3-white">GAME: Highlander: The Board Game</li>
-                            <li class="li3-white">STUDIO: ALC Studios</li>
-                            <li class="li3-white">PRICE: $35.00</li>
-                            <li class="li3-white">DETAILS: 2-6 Players, 60 minutes, Ages 12 and up</li>
-                        </ol>
+        <br/>
+
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="heading-1">
+                    <h2 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-label="pair of dice used to toggle accordion open or closed">
+                            Releasing This Month:
+                        </a>
+                    </h2>
+                </div>
+                <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+                    <div class="panel-body">
+                        <div class="box">
+                            <div class="greetings">
+                                <article>
+                                    <h2> Coming up - Highlander: The Board Game!</h2>
+                                    <p class="justified">
+                                        Highlander: The Board Game is a quick-playing game in which you duel throughout the ages in order to be the last immortal standing.</p>
+                                    <p class="justified">
+                                        In the game, you choose an immortal from the timeless movie (or perhaps even new characters), collect allies, and live entire lives to give you the greatest chance at winning your duels — but you do not get to decide when exactly you will meet your foes on the battlefield.</p>
+                                    <p class="justified">
+                                        Highlander: The Board Game is a 2 to 6 player game in which each player takes on the role of an immortal. These mighty warriors live many lives throughout the centuries as they prepare for the gathering, a time in which they will be drawn to a distant land in order to fight to the death for "the prize." There can be only one Highlander - are ye up for it?
+                                    </p>
+                                    <p class="code_o_strong justified">
+                                        In-Store Demonstration on 2/18/19 - Spaces Limited!</p>
+                                    <img src="images/highlander_play.png" alt="Layout of game contents for'Highlander: The Board Game'" class="center_it">
+                                    <br>
+                                </article>
+                                <div class="borderbox-table-reverse">
+                                    <article>
+                                        <div style="text-align: left"><img class="top-text" src="images/highlander.jpg" alt="banner for 'Highlander: The Board Game Box'">
+                                        </div>
+                                        <div style="overflow-x:auto;">
+                                            <table>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GAME:</td>
+                                                    <td>Highlander: The Board Game</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>STUDIO:</td>
+                                                    <td>ALC Studios</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PRICE:</td>
+                                                    <td>$35.00 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PLAYERS:</td>
+                                                    <td>2-6 Players</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TIME:</td>
+                                                    <td>60 mins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AGES:</td>
+                                                    <td>Ages 12 and up! </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <br>
-                    <p class="overflow">
-                        <p>Highlander: The Board Game is a 2 to 6 player game in which each player takes on the role of an immortal. These mighty warriors live many lives throughout the centuries as they prepare for the gathering, a time in which they will be drawn to a distant land in order to fight to the death for "the prize." There can be only one Highlander - are ye up for it?</p>
-                        <br>
-                        <p><em>In-Store Demonstration on 12/18/18 - Spaces Limited!</em>
-                        </p>
+                </div></div>
+            <!--- Next Month Releases Section -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-2">
+                        <h2 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2" aria-label="pair of dice used to toggle accordion open or closed">
+                                Releasing Next Month
+                            </a>
+                        </h2>
+                    </div>
+                    <div id="collapse-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-2">
+                        <div class="panel-body">
+                            <div class="box">
+                                <div class="wrapper-grid">
+                                    <div class="borderbox-table">
+                                        <article>
+                                            <div style="text-align: left"><img src="images/minibosses.png" alt="cover of 'Rise of the Minibosses' Card Game Box" class="center_it">
+                                            </div>
+                                            <table>
+                                                <tr>
+                                                    <td></td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>GAME:</td>
+                                                    <td>Rise of the Minibosses</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>STUDIO:</td>
+                                                    <td>Brotherwise Games</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PRICE:</td>
+                                                    <td>$24.95 USD</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>PLAYERS:</td>
+                                                    <td>2-4 Players</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>TIME:</td>
+                                                    <td>30 mins</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>AGES:</td>
+                                                    <td>Ages 12 and up! </td>
+                                                </tr>
+
+                                            </table>
+                                        </article>
+                                    </div>
+                                    <article>
+                                        <h2>Boss Monster 3: Rise of the Minibosses</h2>
+                                        <p class="justified">
+                                            Welcome to Boss Monster 3 - Rise of the Minibosses! Powerful Minibosses can be hired to enhance your dungeon by permanently modifying rooms. Earn Coins through effective use of all new Rooms and Spells. Use those Coins to power up your Rooms or use them to promote your Minibosses to learn even deadlier abilities. Rise of the Minibosses gives players more options than ever before to craft the deadliest dungeon they can and become the baddest Boss in the land.</p>
+                                        <div style="text-align: left"><img src="images/boss_logo.png" alt="logo for 'Boss Monster' Card Game Franchise" class="center_it">
+                                            <br>
+                                            <p class="code_o_strong justified">Want to learn to battle with the 8-bit Bad Guys? In-Store Demonstration on 2/12/19 and 12/16/19</p>
+                                            <br>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--- Accordion-Pre-Orders -->
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading-3">
+                        <h2 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3" aria-label="pair of dice used to toggle accordion open or closed">
+                                Pre-Order Products
+                            </a>
+                        </h2>
+                    </div>
+                          <div id="collapse-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-3">
+                        <div class="panel-body">
+                    <div class="box_gray">
+
+                        <article>
+                            <h2>Tokyo Highway - Build your Game!</h2>
+
+                            <p class="code_o_strong">From the Manufacturer:</p>
+                            <p class="justified">“This game is based on Tokyo Metropolitan Expressway known for its distinctive metropolitan structure. The game has no board, no squares. Players build roadways across each others highway and compete to place all their cars under a certain rule. As you follow the simple steps and build your way, there arises a unique architectural space on the table. Build your original highway with the balance of your fingertips and creative construction strategy.”</p>
+
+                    <a data-fancybox="gallery" href="images/pre-order4_tokyoh.png" data-title="'Tokyo Highway' box art and game contents"><img src="images/thumbs/4_tokyoh_small.png" alt="'Tokyo Highway' box art and game contents" class="center_it"></a>
+                    <a data-fancybox="gallery" href="images/pre-order3_tokyoh.png" data-title= alt="'Tokyo Highway'game play example"><img src="images/thumbs/3_tokyoh_small.png" alt="'Tokyo Highway'game play example" class="center_it"></a>
+                            </p>
+                            <div style="text-align: left">
+                                <p class="code_o_strong justified">Want to learn to battle with the 8-bit Bad Guys? In-Store Demonstration on 2/12/19 and 12/16/19</p>
+                                <br>
+
+                        </article>
+                        <!-- </div> -->
+                        <div class="borderbox-table">
+                            <article>
+                                <div style="text-align: right">
+                                </div>
+                                <div style="overflow-x:auto;">
+                                    <img src="images/pre-order_tokyoh.png" alt="Stylized image of word 'Tokyo Highway' game logo">
+                                    <table>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>GAME:</td>
+                                            <td>Tokyo Highway</td>
+                                        </tr>
+                                        <tr>
+                                            <td>STUDIO:</td>
+                                            <td>Itten & Asmodee Studios</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PRICE:</td>
+                                            <td>$49.99 USD</td>
+                                        </tr>
+                                        <tr>
+                                            <td>PLAYERS:</td>
+                                            <td>2-4 Players</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TIME:</td>
+                                            <td>30 mins</td>
+                                        </tr>
+                                        <tr>
+                                            <td>AGES:</td>
+                                            <td>Ages 8 and up! </td>
+                                        </tr>
+
+                                    </table>
+                            </article>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="box">
-                    <p class="q_a2">Releasing the week of December 14th, 2018:</p>
-                    <div class="borderbox">
-                        <ol>
-                            <li>GAME: Rise of the Minibosses</li>
-                            <li>STUDIO: Brotherwise Games</li>
-                            <li>PRICE $24.95</li>
-                            <li>DETAILS: 2-4 Players, 30 minutes, Ages 12 and up</li>
-                        </ol>
-                    </div>
-                    <img src="images/minibosses.png" alt="cover of 'Rise of the Minibosses' Card Game Box" class="game">
-                    <p>Welcome to Boss Monster 3 - Rise of the Minibosses! Powerful Minibosses can be hired to enhance your dungeon by permanently modifying rooms. Earn Coins through effective use of all new Rooms and Spells. Use those Coins to power up your Rooms or use them to promote your Minibosses to learn even deadlier abilities. Rise of the Minibosses gives players more options than ever before to craft the deadliest dungeon they can and become the baddest Boss in the land.</p>
-                    <br>
 
-                    <p><em>In-Store Demonstration on 12/28/18 and 12/29/18</em>
-                    </p>
-                </div>
-                <div class="aside">
-                    <h3>Pre-Order Now Available!</h3>
-                    <img src="images/pre-order_tokyoh.png" alt="Stylized image of word 'Tokyo Highway' game logo" class="game">
-                    <div class="borderbox">
-                        <ol>
-                            <li class="li4-black">GAME: Tokyo Highway</li>
-                            <li class="li4-black">STUDIO: Itten</li>
-                            <li class="li4-black">PRICE: $49.99</li>
-                            <li class="li4-black">DETAILS: 2-4 players, 30 minutes, Ages 8 and up</li>
-                        </ol>
-                    </div>
-                    <img src="images/pre-order4_tokyoh.png" alt="'Tokyo Highway' box art and game contents" class="main_center">
-                    <p class="overflow">
-                        <strong>From the Manufacturer:</strong> “This game is based on Tokyo Metropolitan Expressway known for its distinctive metropolitan structure. The game has no board, no squares. Players build roadways across each others highway and compete to place all their cars under a certain rule. As you follow the simple steps and build your way, there arises a unique architectural space on the table. Build your original highway with the balance of your fingertips and creative construction strategy.”
-                    </p>
-                    <img src="images/pre-order3_tokyoh.png" alt="photo of 'Tokyo Highway' gameplay" class="main_center">
-                    <br/>
-                    <p><strong>Our Take:</strong> Highly Creative, it invokes memories of construction-based games of the 1970’s and early 80s. Finding creative solutions to avoid traffic blocks, create towering lanes that carefully balance their loads and watch out for road blocks. B & E Stamp of approval!</p>
-                </div>
-                <div id="cust-footer"></div>
-                <div class="footer-container container text-center">
-                    <img class="footer-logo" src="images/b_e_logo.png" alt="B & E Stylized Text Company Logo" />
-                    <div class="footer-link-container">
-                        <a class="twitter footer-social-icon" aria-label="twitter icon" rel="nofollow" target="new" href="https://twitter.com/BandE_Games"></a>
-                        <a class="facebook footer-social-icon" aria-label="facebook icon" rel="nofollow" target="new" href="https://www.facebook.com/BandE_Games/"></a>
-                        <a class="ebay footer-social-icon" aria-label="eBay icon" rel="nofollow" target="new" href="https://www.ebay.com/str/bandegames"></a>
-                    </div>
-                    <p class="hours">Weekly Hours Friday - 5pm-12am and Saturday-Sunday 10am-7pm</p>
-                    <address>B & E Games | 7 Cherry Tree Lane, Wimpole, MI, 48312 | Phone (669) 244-2631 </address>
-                    <footer>© 2018 B & E Games</footer>
-                </div>
-                <script>
-                    function myFunction() {
-                        var x = document.getElementById("myNav");
-                        if (x.className == "nav") {
-                            x.className += " responsive";
-                        } else {
-                            x.className = "nav";
-                        }
-                    }
-                </script>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                <script>
-                    $(function() {
-                        $('a').each(function() {
-                            if ($(this).prop('href') == window.location.href) {
-                                $(this).addClass('current');
+
+
+
+                        <!-- Start Footer Section -->
+                        <div id="cust-footer"></div>
+                        <div class="footer-container container text-center">
+                            <img class="footer-logo" src="images/b_e_logo.png" alt="B & E Stylized Text Company Logo" />
+                            <div class="footer-link-container">
+                                <a class="twitter footer-social-icon" aria-label="twitter icon" rel="nofollow" target="new" href="https://twitter.com/BandE_Games"></a>
+                                <a class="facebook footer-social-icon" aria-label="facebook icon" rel="nofollow" target="new" href="https://www.facebook.com/BandE_Games/"></a>
+                                <a class="ebay footer-social-icon" aria-label="eBay icon" rel="nofollow" target="new" href="https://www.ebay.com/str/bandegames"></a>
+                            </div>
+                            <p class="hours">Weekly Hours Friday - 5pm-12am and Saturday-Sunday 10am-7pm</p>
+                            <address>B & E Games | 7 Cherry Tree Lane, Wimpole, MI, 48312 | Phone (669) 244-2631 </address>
+                            <footer>© 2018 B & E Games</footer>
+                        </div>
+                        <script>
+                            function myFunction() {
+                                var x = document.getElementById("myNav");
+                                if (x.className == "nav") {
+                                    x.className += " responsive";
+                                } else {
+                                    x.className = "nav";
+                                }
                             }
-                        });
-                    });
-                </script>
-                <script>
-                    window.onscroll = function() {
-                        myFunction()
-                    };
-
-                    var header = document.getElementById("myHeader");
-                    var sticky = header.offsetTop;
-
-                    function myFunction() {
-                        if (window.pageYOffset > sticky) {
-                            header.classList.add("sticky");
-                        } else {
-                            header.classList.remove("sticky");
-                        }
-                    }
-                </script>
-            </main>
+                        </script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                        <script>
+                            $(function() {
+                                $('a').each(function() {
+                                    if ($(this).prop('href') == window.location.href) {
+                                        $(this).addClass('current');
+                                    }
+                                });
+                            });
+                        </script>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+                        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+                        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+                        <script src="js/javascript.js"></script>
+    </main>
 </body>
 
 </html>
