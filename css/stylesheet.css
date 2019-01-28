@@ -16,7 +16,7 @@ body {
   background-color: #7FDBFF;
 }
 
-/* overlay effect for index page carousel - lays on top of the container and over the image */
+/* overlay effect for index page carousel - lays on top of the container and over the image for text */
 .overlay {
   position: absolute; 
   bottom: 10px; 
@@ -72,6 +72,17 @@ body {
   justify-content: space-between;
 }
 
+/* in-store demo last accordion level*/
+.farewell {
+  background-color: #0074D9;
+  color: #ffffff;
+  grid-template-columns: 1fr;
+  grid-gap: 2%;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+}
+
 .box {
 	background-color: #ffffff;
     font-family: Baloo, sans-serif;
@@ -92,19 +103,22 @@ body {
     color: #000000;
 }
 
-.greetings{
-	background-color: #0074D9;
-	color: #ffffff;
-  	border-radius: 12px;
-  	padding: 20px;
-  	font-size: 150%;
-}
 /* gray pre-order border box*/
-.aside{
+.box_gray{
   	border-radius: 12px;
   	color: #000000;
   	padding: 20px;
   	border: 10px solid #888888;
+}
+
+.greetings {
+  width: 100%;
+  background-color: #0074D9;
+  color: #ffffff;
+  align-items: start;
+  align-content: space-around;
+  justify-content: space-between;
+
 }
 
 .articleboxformat {
@@ -112,6 +126,32 @@ body {
   grid-template-columns: 75% 25%;
   grid-template-rows: 10vw 30vw 10vw;
   grid-gap: 2%;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: auto;
+  padding: 1px;
+  display: table;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  font-weight:900;
+}
+
+tr:nth-child(even) {
+  background-color: #fff;
+  color: #000;
+}
+tr:nth-child(even) {
+  background-color: #7FDBFF;
+  color: #000;
+}
+table td:last-child {
+  width:100%;
 }
 
   /* -- This is a fancy pants flip panel based on https://css3playground.com/3d-flip-cards/ *
@@ -133,7 +173,7 @@ body {
  ,//o             .,oo/o///////(((((((///(/////ooooo,,,,..  .%            .,o
  o///             .,oo//o///////((((((///((/////oooooo,,,..  .%#.           .,,
   ..               ,,o//////////(((((((/((((/(//oo,........  ..        ........
-                  ..,o/////////////((/(//////o,.  .,,... ... .                 
+                  ..,o/////////////((/(//////o,ooo.,,... ... .                 
       o///,  (,   .,ooo//oo,,,.. ...,o//////o,,,,,,..,..,.....                 
       .o/o   ,,o  .,oooo,.,oo////o,,,,,o///o,..,,,,oo.,,,,,..,               ..
              oo/o  ,o/o/oo,o,.../,oo,oo/((/o,oooooooooooo,,...             ....
@@ -186,6 +226,10 @@ input[type=text], input[type=email] {
   color: #000;
 }
 
+#f-name, #f-email {
+  color: #000;
+}
+
 /* add a color border to the open text field.*/
 textarea{
   width: 100%;
@@ -202,6 +246,7 @@ textarea{
 input[type=submit], input[type=button] {
   border: 1px solid #000;
   border-radius: 4px;
+  color: #000;
 }
 
 
@@ -269,7 +314,7 @@ input[type=submit], input[type=button] {
     width: inherit;
     height: inherit;
     border: 2px solid #e31c3d;
-    background: #333;
+    background: #000;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
     -webkit-transform: rotateY(-179deg);
             transform: rotateY(-179deg);
@@ -304,10 +349,10 @@ input[type=submit], input[type=button] {
   /* -- contact panel -- */
   .contact {
     width: 290px;
-    height: 310px;
+    height: 315px;
   }
   /* -- cosmetics -- */
-  .flippanel .pad {padding: 0 15px; }
+  .flippanel .pad {padding: 0 15px 15px 15px; }
   .flippanel.flip .action {display: none; }
   .block ol li {text-align: left; margin: 0 0 0 28px; }
   .block .action {display: block; padding: 3px; background: #333; text-align: right; font-size: .8em; opacity: 0; position: absolute; cursor: pointer; -webkit-transition: opacity .2s linear; }
@@ -340,7 +385,7 @@ input[type=submit], input[type=button] {
 .nav ul{
   float: right;
   padding-left: 0px;
-  /*needed to override bootstrap accordions in later use*/
+/*needed to override bootstrap accordions in later use*/
   margin-block-start: 1em;
   margin-block-end: 1em;
 }
@@ -483,11 +528,11 @@ a.current {
 
 article,
 aside{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/*  display: inline-grid;*/
+  font-family: 'PT Sans', sans-serif;
+  justify-content: left;
   font-family: Arial, Helvetica, sans-serif;
-
+  width: 100%;
 }
 /* note changes of li to black from #429CEA for WACG*/
 li {
@@ -505,20 +550,7 @@ li {
   color: #ffffff;
   font-weight: bold;
 }
-/* regular white font in list on product page against dark blue background #0074D9*/
-.li3-white {
-  /*line-height: 1.5;*/
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  font-weight: bold;	
-}
 
-.li4-black {
-  line-height: 1.5;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #000000;
-  font-weight: bold;  
-}
 #index{
   font-family: Arial, Helvetica, sans-serif;
   color: #000000;
@@ -599,11 +631,8 @@ p {
     clear: both;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-p.white_head {
-    font-family: Bungee, sans-serif;
-    font-size:20px;
-    color:#ffffff;
+p.blackout{
+  color:#000;
 }
 
 p.black_head {
@@ -615,6 +644,11 @@ p.code_o {
     font-family: 'Source Code Pro', monospace;
     color:#000000;
 }
+p.code_o_strong {
+    font-family: 'Source Code Pro', monospace;
+    color:#000000;
+    font-weight: 900;
+}
 
 p.code_o_fonts {
     font-family: 'Baloo', sans-serif;
@@ -625,18 +659,38 @@ p.lefty-o {
   text-align: left;
 }
 
+p.justified {
+  text-align: justify;
+}
+
 ul{
 }
 
 .borderbox {
-	display: flex;
+	display: inline-grid;
 	width: 100%;
-	/*vertical-align: middle;*/
 	border-style: solid;
 	border-width: thick;
 	color: #0074D9;
 	padding:10px;
 }
+
+.borderbox-table {
+  display: inline-table;
+  border-style: solid;
+  border-width: thick;
+  color: #0074D9;
+  padding:10px;
+}
+
+.borderbox-table-reverse {
+  display: inline-table;
+  border-style: solid;
+  border-width: thick;
+  color: #fff;
+  padding:10px;
+}
+
 
 .borderbox_reverse {
 	width:100%;
@@ -660,9 +714,27 @@ img {
 	margin-left: auto;
     margin-right: auto;
     padding-bottom: 4px;
-    padding-bottom: 4px;
 }
 
+/*Center an image in a div*/
+img.center_it {
+  display: block;
+  margin: 0 auto;
+/*  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;*/
+}
+
+img.top-text {
+  vertical-align: text-top;
+}
+
+img.bottom-text {
+  vertical-align: text-bottom;
+}
+
+/* shrink box images in index page*/
 .center {
     display: block;
     width: 150px;
@@ -686,14 +758,6 @@ img {
     width: 200px;
     padding:10px;
 
-}
-
-.game {
-    display: inline-block;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 
 /* This exists to put a #fff circle behind the logo on each page*/
@@ -804,7 +868,7 @@ img {
   grid-template-columns: 1fr;
   grid-gap: 2%;
     border-radius: 5px;
-    padding: 20px;
+    padding: 0 20px 15px 15px;
     font-size: 90%;
 }
  .main_center {
@@ -821,6 +885,15 @@ img {
   padding:10px;
 }
 
+.borderbox-table {
+  display: inline-table;
+  width: 100%;
+  border-style: solid;
+  border-width: thick;
+  color: #0074D9;
+  padding:10px;
+}
+
  .borderbox_reverse {
   border-style: solid;
   border-width: thick;
@@ -828,22 +901,30 @@ img {
 }
 
 .borderbox_reverse_small {
-  display: inline-flex;
+  display: inline-table;
   vertical-align: middle;
   border-style: solid;
   border-width: thick;
   color: #ffffff;
 }
 
+ h1 {
+  font-size: 2vw;
+  font-family:Baloo;
+  text-align: center;
+  color: #000000;
+  padding:2px;
+}
+
+.big {
+  font-size: 4vw;
+  }
+
 h2 {
   font-family: Baloo, sans-serif;
   text-align: center;
 }
 
-h2.arttitle{
-    -webkit-transform:rotate(0deg);
-    white-space: wrap;
-}
 .panel-title{
     font-family: Baloo, sans-serif;
     font-size: 1.5em;
@@ -923,12 +1004,16 @@ li {
   }
  .contact {
     width: 290px;
-    height: 240px;
+    height: 270px;
   }
 
   h1{
     font-size: 16px;
   }
+.big {
+  font-size: 4vw;
+  }
+
   .nav a {display: none;}
   .nav a.icon {
     float: right;
@@ -999,8 +1084,9 @@ li {
   .carousel-cell {
   width: 75%;
   }
+
   article,
-  aside{
+  aside, section{
   display: inline-grid;
   align-items: center;
   justify-content: center;
@@ -1029,6 +1115,5 @@ li {
     display: block;
     height: 300px;
     padding:10px;
-}
-
+  }
 }
