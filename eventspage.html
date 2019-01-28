@@ -15,8 +15,9 @@
 </head>
 
 <body>
-    <main>
+    <main id="maincontent">
         <header>
+            <a href="#mainpage" class="skip">Skip to content</a>
             <div class="circle">
                 <img src="images/b_e_logo.png" height="100" width="100" alt="B & Games logo" />
             </div>
@@ -38,11 +39,12 @@
                 </div>
             </nav>
         </header>
+        <a id="mainpage">
+        </a>
         <br/>
-        <!-- I need to be centered appropriately -->
         <h1 class="big">In-Store Events</h1>
-
-        <!-- Accordion-Calendar-Section -->
+<h3> Come Join in the Fun at B & E!</h3>
+        <!-- Accordion-Calendar-Section  THIS DID NOT WORK DYNAMICALLY (EVEN THOUGH IT WAS SUPPOSED TO), BUT I WANT YOU TO SEE IT COS I WORKED HARD ON IT-->
 
         <!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
@@ -68,37 +70,7 @@
             <div id="calendar_content"></div>
         </div>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br> -->
+      -->
 
         <!--- Accordion-Q+A-Section -->
 
@@ -106,17 +78,17 @@
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading-1">
                     <h2 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1" aria-label="pair of dice used to toggle accordion open or closed">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-1" aria-expanded="true" aria-controls="collapse-1" aria-label="pair of dice used to toggle accordion open or closed">
                             Q & A Session
                         </a>
                     </h2>
                 </div>
-                <div id="collapse-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-1">
+                <div id="collapse-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-1">
                     <div class="panel-body">
                         <div class="box">
                             <div class="wrapper-grid">
                                 <div class="borderbox-table">
-                                    <article>
+                                    <div class="divvy_up_sections">
                                         <div style="text-align: left"><img class="center_it top-text" src="images/catan.png" alt="game cover for 'Settlers of Catan'">
                                         </div>
                                         <div style="overflow-x:auto;">
@@ -151,7 +123,7 @@
                                                 </tr>
                                             </table>
                                         </div>
-                                    </article>
+                                    </div>
                                 </div>
 
                                 <article>
@@ -160,11 +132,10 @@
                                         In Catan (formerly The Settlers of Catan), players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces. Players collect these resources (cards)—wood, grain, brick, sheep, or stone—to build up their civilizations to get to 10 victory points and win the game.</p>
                                     <p class="justified">
                                         Meet the creator of Settlers of Catan, Klaus Teuber! This is a one of a kind event experience as players of this all-time favorite will be able to hear Klaus speak, learn never before revealed secrets of the Catan Series!</p>
-                                    <!--  <div class="container_overlay"> --><img src="images/klaus.png" alt="Photo of Klaus Tauber, Catan Creator" class="bottom-text" />
-                                    <!-- <div class="overlay">Join the Battle for Hogwarts!</div> -->
-                            </div>
+                                    <img src="images/klaus.png" alt="Photo of Klaus Tauber, Catan Creator" class="bottom-text" />
+                                </article>
                             <br>
-                            </article>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,16 +157,16 @@
                         <div class="box">
                             <h2>A Tournament of Splendor!</h2>
                             <div class="wrapper-grid">
-                                <article>
+                                <div class="divvy_up_sections">
                                     <p class="justified">
                                         Splendor is a game of chip-collecting and card development. Players are merchants of the Renaissance trying to buy gem mines, means of transportation, shops—all in order to acquire the most prestige points. If you're wealthy enough, you might even receive a visit from a noble at some point, which of course will further increase your prestige.</p>
 
                                     <p>Join us for a day of Splendor! Can you trade and collect enough gems to win the heart of the nobles? Or will you be stuck with a stockpile of cards with no place to go. Spaces are Limited, call for details.</p>
-                                </article>
+                                </div>
 
 
                                 <div class="borderbox-table"><img src="images/splendor.png" alt="cover of game box for 'Splendor'" class="center_it">
-                                    <article>
+                                    <div class="divvy_up_sections">
                                         <table>
                                             <tr>
                                                 <td></td>
@@ -227,7 +198,7 @@
                                             </tr>
 
                                         </table>
-                                    </article>
+                                    </div>
                                 </div>
                             </div>
                             <img src="images/splendor2.png" alt="group of 'Splendor' jewel tokens" class="center_jewels" />
@@ -250,8 +221,8 @@
                         <div class="farewell">
                             <div class="borderbox_reverse background">
                                 <ul>
-                                    <li class="li2-circle-white">Highlander 11/18/18 - Spaces Limited - 6pm</li>
-                                    <li class="li2-circle-white">Boss Monster 3: Rise of the Minibosses 11/28/18 and 11/29/18 - 2pm</li>
+                                    <li class="li2-circle-white">Highlander 2/18/19 - Spaces Limited - 6pm</li>
+                                    <li class="li2-circle-white">Boss Monster 3: Rise of the Minibosses 2/12/19 and 12/16/19 - 2pm</li>
                                 </ul>
                             </div>
                         </div>
@@ -273,6 +244,10 @@
             <address>B & E Games | 7 Cherry Tree Lane, Wimpole, MI, 48312 | Phone (669) 244-2631 </address>
             <footer>© 2018 B & E Games</footer>
         </div>
+           <div class="scroll-to-top" style="display: block;">
+            <a href="#mainpage"><i class="fa fa-angle-up" aria-label="up chevron for snap to content when at end of page"></i></a>
+        </div>
+        <!-- .scroll-to-main -->
         <script>
             function myFunction() {
                 var x = document.getElementById("myNav");
@@ -286,8 +261,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             $(function() {
+                var url = window.location.href.split('#')[0];
                 $('a').each(function() {
-                    if ($(this).prop('href') == window.location.href) {
+                    if ($(this).prop('href') == url) {
                         $(this).addClass('current');
                     }
                 });
