@@ -121,6 +121,10 @@ body {
 
 }
 
+.blue {
+  background-color: #0074D9;
+}
+
 .articleboxformat {
   display: grid;
   grid-template-columns: 75% 25%;
@@ -1011,7 +1015,7 @@ li {
     font-size: 16px;
   }
 .big {
-  font-size: 4vw;
+  font-size: 32px;
   }
 
   .nav a {display: none;}
@@ -1092,6 +1096,33 @@ li {
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   }
+}
+@media screen and (max-width: 349px){
+
+
+  .nav a.icon {
+  display: none;
+  }
+  .nav ul{
+    max-width: none;
+    padding-top: 0em;
+    padding-left: 0em;
+  }
+  .nav li{
+    float: none;
+    text-align: left;
+    padding-right: 40px;
+    padding-left: 0px;
+  }
+  .nav a {
+    position: relative;
+    display: block;
+    text-align: left;
+  }
+  .nav li:not(:first-child) {
+    padding-left: 0px;
+  }
+
 }
 @media only screen and (min-width: 785px)  {
 
