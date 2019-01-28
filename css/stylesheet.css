@@ -20,14 +20,14 @@ body {
 .overlay {
   position: absolute; 
   bottom: 10px; 
-  background: #000;
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: #fff;
+ /* background: rgba(255, 255, 255, 0.5); /* White see-through */
   color: #f1f1f1; 
   width: 100%;
   transition: .5s ease;
   opacity:0;
-  /*color: #fff;*/ /*Not necessary for WCAG*/
-  color: #e31c3d;
+  /*for WCAG and WAVE*/
+  color: #000;
   font-size: 18px;
   text-align: center;
 }
