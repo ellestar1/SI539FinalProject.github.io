@@ -105,6 +105,7 @@ body {
 
 /* gray pre-order border box*/
 .box_gray{
+    font-size: 18px;
   	border-radius: 12px;
   	color: #000000;
   	padding: 20px;
@@ -250,7 +251,12 @@ textarea{
 input[type=submit], input[type=button] {
   border: 1px solid #000;
   border-radius: 4px;
+  background-color: #7FDBFF;
   color: #000;
+}
+
+select{
+  background-color: #7FDBFF;
 }
 
 
@@ -516,6 +522,27 @@ i[class*="fa-chevron-"]{
 }
 /* End Dynamic Calendar Stuff*/
 
+.skip {
+        position: absolute;
+        top: -1000px;
+        left: -1000px;
+        height: 1px;
+        width: 1px;
+        text-align: left;
+        overflow: hidden;
+    }
+    
+    a.skip:active, 
+    a.skip:focus, 
+    a.skip:hover {
+        color: #fff;
+        left: 0; 
+        top: 0;
+        width: auto; 
+        height: auto; 
+        overflow: visible; 
+    }
+
 /* give links color when hovered over with mouse*/
 a:hover {
   color: #fdb81e;
@@ -537,6 +564,9 @@ aside{
   justify-content: left;
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
+}
+.gallery {
+  text-align: center;
 }
 /* note changes of li to black from #429CEA for WACG*/
 li {
@@ -687,14 +717,19 @@ ul{
   padding:10px;
 }
 
+.borderbox-center{
+  max-width: 500px;
+  margin:auto;
+  display: block;
+}
+
 .borderbox-table-reverse {
-  display: inline-table;
+  display: block;
   border-style: solid;
   border-width: thick;
   color: #fff;
   padding:10px;
 }
-
 
 .borderbox_reverse {
 	width:100%;
@@ -724,10 +759,11 @@ img {
 img.center_it {
   display: block;
   margin: 0 auto;
-/*  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;*/
+}
+
+img.center_it_thumb {
+  display: inline-block;
+  margin: 0 auto;
 }
 
 img.top-text {
@@ -1001,16 +1037,34 @@ li {
 
 
 @media screen and (max-width: 785px) {
-  body.box{
+  .box{
     background-color: #ffffff;
     font-family: Baloo, sans-serif;
     font-size:12px;
   }
  .contact {
     width: 290px;
-    height: 270px;
+    height: 290px;
+  }
+  .greetings {
+  background-color: #0074D9;
+  color: #ffffff;
+  grid-template-columns: 1fr;
+  grid-gap: 2%;
+  border-radius: 5px;
+  padding: 0 20px 15px 15px;
+  font-size: 90%;
+  }
+  .blue {
+  background-color: #0074D9;
   }
 
+  .box_gray{
+    font-size: 12px;
+  }
+  .flippanel{
+    font-size: 1em;
+  }
   h1{
     font-size: 16px;
   }
@@ -1121,6 +1175,10 @@ li {
   }
   .nav li:not(:first-child) {
     padding-left: 0px;
+  }
+   .contact {
+    width: 90%;
+    height: 320px;
   }
 
 }
