@@ -16,6 +16,7 @@
 <body>
     <main>
         <header>
+            <a href="#mainpage" class="skip">Skip to content</a>
             <div class="circle">
                 <img src="images/b_e_logo.png" height="100" width="100" alt="B & Games logo" />
             </div>
@@ -37,6 +38,8 @@
                 </div>
             </nav>
         </header>
+        <a id="mainpage">
+        </a>
         <h1> We’re not here to be the big guy - we’re just
   <img src="images/b_e_logo.png" alt="B & E Games stylized letters logo" class="center"></h1>
         <div class="wrapper-grid">
@@ -66,14 +69,11 @@
                                     <p class="code_o">
                                         <input id="f-name" name="f-name" aria-label="Enter Name" type="text" placeholder="name" required/>
                                         <input id="f-email" name="f-email" aria-label="Enter Email" type="email" placeholder="email" required/>
-                                    </p>
-                                    <p class="code_o">How did you find us?</p><p class="blackout">
-                                        <select id="f-how" name="f-how" aria-label="Choose option, how did you find us?"></p>
-                                            <label for="howFind">How did you find us?</label>
+                                    <p class="code_o">How did you find us?<p class="blackout">
+                                        <select id="f-how" name="f-how" aria-label="Choose option, how did you find us?">
                                             <option value="mouth">Word of Mouth</option>
                                             <option value="internet">Internet</option>
                                         </select>
-                                    </p>
                                     <p class="code_o">Comments or Questions?</p>
                                     <p>
                                         <textarea id="f-msg" name="f-msg" aria-label="Free entry of comments" placeholder="Enter your message"> </textarea>
@@ -115,10 +115,10 @@
             <address>B & E Games | 7 Cherry Tree Lane, Wimpole, MI, 48312 | Phone (669) 244-2631 </address>
             <footer>© 2018 B & E Games</footer>
         </div>
-        <div class="scroll-to-top" style="display: block;">
-            <i class="fa fa-angle-up"></i>
+         <div class="scroll-to-top" style="display: block;">
+            <a href="#mainpage"><i class="fa fa-angle-up" aria-label="up chevron for snap to content when at end of page">></i></a>
         </div>
-        <!-- .scroll-to-top -->
+        <!-- .scroll-to-main -->
         <script>
             function myFunction() {
                 var x = document.getElementById("myNav");
