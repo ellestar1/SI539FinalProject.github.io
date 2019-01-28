@@ -5,10 +5,11 @@
     <meta charset="utf-8">
     <title>Home Page -- B & E Games</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cMontserrat+Alternates:900%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="shortcut icon" href="images/favicon.ico">
 </head>
@@ -128,7 +129,7 @@
         </script>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
+        <!-- <script>
             $(function() {
                 $('a').each(function() {
                     if ($(this).prop('href') == window.location.href) {
@@ -136,27 +137,14 @@
                     }
                 });
             });
-        </script>
+        </script> -->
 
         <!-- Call the external jquery/js -->
-        <script src="http://flexslider.woothemes.com/js/jquery.flexslider.js"></script>
-        <!-- wee script to call the flex-sliding carousel I just said to call, but added Right-to-Left support for added accessibility for eastern audiences. I had to fix this with .on because there's a deprecated .load item in the source material. -->
-        <!-- <script>
-$(window).on(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    animationLoop: false,
-    itemWidth: 210,
-    itemMargin: 5,
-    mousewheel: true,
-    rtl: true
-  });
-});
-</script> -->
+     
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script>
             $('.main-carousel').flickity({
-                // options
+                // options changed to override CDN.
                 cellAlign: 'center',
                 wrapAround: true
             });

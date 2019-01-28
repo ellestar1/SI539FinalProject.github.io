@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href='https://fonts.googleapis.com/css?family=Baloo%7cFjalla+One%7cMontserrat+Alternates:900%7cSigmar+One%7cPassion+One:700%7cRoboto+Slab:700%7cBungee%7cPT+Sans%7cSource+Code+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="shortcut icon" href="images/favicon.ico">
 </head>
@@ -43,7 +44,7 @@
                 <div id="thinghead">
                     <h3>Well Hello There!</h3>
                 </div>
-                <p class="overflow">
+                <p class="justified">
                     <p>Hello there! We’re B & E Games. Founded in 2015, Our mission is to provide you with inspiring games that are still fun at every level. We started with custom mail-order and trade show events and in 2019 expanded into a full retail location in Michigan, USA.</p>
                     <p> Brandon loves to demo all kinds of different games from North America and Europe and Elizabeth explores Asia, Africa and Australia to bring you something new and different each week.</p>
                     <img src="images/d20.png" alt="20-sided die icon" class="center">
@@ -52,9 +53,9 @@
                     <div class="contact flippanel">
                         <div class="front">
                             <h3>Got an idea?</h3>
-                            <p class="code_o">Acme, Co.
-                                <br>123 Easy St.
-                                <br>Austin, TX 78731</p>
+                            <p class="code_o">B & E Games
+                                <br>7 Cherry Tree Lane
+                                <br>Wimpole, MI, 48312 </p>
                             <p class="code_o_fonts">Or <a class="action" href="#form">send us a message</a>
                             </p>
                         </div>
@@ -63,17 +64,22 @@
                                 <h3>Send Us a Message!</h3>
                                 <form action="#">
                                     <p class="code_o">
-                                        <input id="f-name" name="f-name" type="text" placeholder="name" required/>
-                                        <input id="f-email" name="f-email" type="email" placeholder="email" required/></p>
-                                        <p><select id="f-how" name="f-how">
-                                            <option value="">How did you find us?</option>
+                                        <input id="f-name" name="f-name" aria-label="Enter Name" type="text" placeholder="name" required/>
+                                        <input id="f-email" name="f-email" aria-label="Enter Email" type="email" placeholder="email" required/>
+                                    </p>
+                                    <p class="code_o">How did you find us?</p><p class="blackout">
+                                        <select id="f-how" name="f-how" aria-label="Choose option, how did you find us?"></p>
+                                            <label for="howFind">How did you find us?</label>
                                             <option value="">Word of Mouth</option>
                                             <option value="internet">Internet</option>
-                                        </select></p>
-                                    <p class="code_o">Comments or Questions?</p><p>
-                                        <textarea id="f-msg" name="f-msg" placeholder="Enter your message"> </textarea>
-                                    <input type="submit" class="edit-submit" value="Send Message" />
-                                    <input type="button" class="cancel" name="cancel" value="Cancel"></p>
+                                        </select>
+                                    </p>
+                                    <p class="code_o">Comments or Questions?</p>
+                                    <p>
+                                        <textarea id="f-msg" name="f-msg" aria-label="Free entry of comments" placeholder="Enter your message"> </textarea>
+                                        <input type="submit" class="edit-submit" value="Send Message" />
+                                        <input type="button" class="cancel" name="cancel" value="Cancel">
+                                    </p>
                                 </form>
                             </div>
                         </div>
@@ -96,7 +102,6 @@
                         <br> We are based out of sunny Michigan, USA but we ship all over the world!</p>
             </div>
 
-        </div>
         </div>
         <div id="cust-footer"></div>
         <div class="footer-container container text-center">
@@ -145,14 +150,14 @@
                 $('.contact .edit-submit').click(function(e) {
                     var nameCheck = document.getElementById("f-name");
                     var emailCheck = document.getElementById("f-email");
-                    if (emailCheck.checkValidity() && nameCheck.checkValidity()){
-                    $('.contact').removeClass('flip');
-                    e.preventDefault();
-                  }
+                    if (emailCheck.checkValidity() && nameCheck.checkValidity()) {
+                        $('.contact').removeClass('flip');
+                        e.preventDefault();
+                    }
                 });
                 $('.contact .cancel').click(function(e) {
-                  $('.contact').removeClass('flip');
-                  e.preventDefault();
+                    $('.contact').removeClass('flip');
+                    e.preventDefault();
                 })
             });
         </script>
