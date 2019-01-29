@@ -1215,7 +1215,7 @@ li {
   }
 }
 
-/* in Chrome 41 or better, take any pointer */
+/* in Chrome 41 or better, take any pointer changes the button sizes when there's no FINE input */
  @media (any-pointer: coarse) {
       
   input[type=submit], input[type=button] {
@@ -1236,12 +1236,3 @@ li {
     }
   }
 */
-
-
-
-
-
-
-
-
-
