@@ -535,7 +535,7 @@ i[class*="fa-chevron-"]{
     a.skip:active, 
     a.skip:focus, 
     a.skip:hover {
-        color: #fff;
+        color: #000;
         font-size: 12px;
         left: 0; 
         top: 0;
