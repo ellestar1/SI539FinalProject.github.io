@@ -522,6 +522,8 @@ i[class*="fa-chevron-"]{
 }
 /* End Dynamic Calendar Stuff*/
 
+/*start skip to main content for accessibility*/
+
 .skip {
         position: absolute;
         top: -1000px;
