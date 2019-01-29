@@ -324,7 +324,7 @@ select{
     width: inherit;
     height: inherit;
     border: 2px solid #e31c3d;
-    background: #000;
+    background: #fff;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
     -webkit-transform: rotateY(-179deg);
             transform: rotateY(-179deg);
@@ -596,7 +596,7 @@ li {
 .li2-circle-white {
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
-  list-style-type: circle;
+  list-style-type: disc;
   color: #ffffff;
   font-weight: bold;
 }
@@ -1214,3 +1214,34 @@ li {
     padding:10px;
   }
 }
+
+/* in Chrome 41 or better, take any pointer */
+ @media (any-pointer: coarse) {
+      
+  input[type=submit], input[type=button] {
+  border: 1px solid #000;
+  font-size:12px;
+  border-radius: 4px;
+  background-color: #7FDBFF;
+  color: #000;
+  }
+}
+
+/* Color accessibility for high contrast or color inversions in Safari or iOs,
+ needed more JS to load in query not using at this time.*/
+/*@media (inverted-colors: inverted) {
+    a, h1, h2, h3, p {
+      background: #000;
+      color: ffff00;
+    }
+  }
+*/
+
+
+
+
+
+
+
+
+
